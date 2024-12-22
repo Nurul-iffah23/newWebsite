@@ -1,0 +1,256 @@
+/* Body styling */
+body {
+    font-family: 'Old Standard TT', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* Header Section */
+.header {
+    background: url('img/lake1.jpeg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    width: 100%;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/* Quiz Section */
+.quiz-container {
+    padding: 20px;
+}
+
+.question {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    gap: 40px; /* Space between buttons */
+    justify-content: center;
+}
+
+.option {
+    background-color: #001f3f; /* Dark blue color */
+    color: white;
+    border: none;
+    padding: 50px 40px;
+    font-size: 22px;
+    border-radius: 15px; /* Rounded corners */
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    
+}
+
+.option:hover {
+    background-color: #002b5e; /* Lighter hover color */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Next Button */
+#next-button {
+    margin: 20px auto;
+    display: block;
+    background-color: #001f3f;
+    color: white;
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 25px; /* Fully rounded button */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#next-button:hover {
+    background-color: #002b5e;
+    transform: scale(1.05);
+}
+
+
+
+/* Score Section */
+.score-section {
+    display: none;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#score {
+    color: #1e3a8a;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#answer-report {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.answer-entry {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.answer-entry:hover {
+    background-color: #f1f1f1;
+}
+
+.answer-entry .question {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.answer-entry .answer {
+    font-size: 16px;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.correct {
+    background-color: #28a745;
+    color: white;
+}
+
+.incorrect {
+    background-color: #dc3545;
+    color: white;
+}
+
+#overall-result {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#retry-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#retry-button:hover {
+    background-color: #0d2a56;
+}
+
+
+
+/* Next Arrow Icon */
+#next-button::before {
+    content: '→'; /* Right arrow symbol */
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+
+/* Next Button (Arrow) Styling with Font Awesome */
+#next-button {
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    margin-top: 20px;
+    width: 100px; /* Set a fixed width */
+    text-align: center;
+}
+
+/* Next Button Icon Styling */
+#next-button i {
+    font-size: 24px; /* Icon size */
+}
+
+#next-button:hover {
+    background-color: #0d1e39;
+}
+ /* Footer Section */
+ .footer {
+    background-color: #001f3f;
+    color: white;
+    padding: 40px 20px;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  .footer-container > div {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f2f2f2;
+  }
+  
+  .footer p, .footer ul {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer ul li a {
+    text-decoration: none;
+    color: #f2f2f2;
+    transition: color 0.3s ease;
+  }
+  
+  .footer ul li a:hover {
+    color: #00d4ff;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  

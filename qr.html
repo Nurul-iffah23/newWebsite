@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #qrcode {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scan the QR Code</h1>
+    <p>Scan this QR code to open the quiz page:</p>
+    <div id="qrcode"></div>
+
+    <script>
+        // URL of your hosted HTML page
+        const url = "file:///C:/Users/Iffah/Desktop/newWebsite/flipcard.html"; // Replace with your actual URL
+
+        // Generate the QR Code
+        QRCode.toCanvas(document.getElementById('qrcode'), url, function (error) {
+            if (error) console.error(error);
+            console.log('QR Code generated!');
+        });
+    </script>
+</body>
+</html>
