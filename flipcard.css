@@ -10,7 +10,7 @@ body {
 
 /* Header Section */
 .header {
-    background: url('img/lake1.jpeg') no-repeat center center/cover;
+    background: url('lake1.jpeg') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 50px 0;
