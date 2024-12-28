@@ -10,7 +10,7 @@ body {
 
 /* Header Section */
 .header {
-    background: url('lake1.jpeg') no-repeat center center/cover;
+    background: url('img/lake1.jpeg') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 50px 0;
@@ -45,8 +45,8 @@ body {
 /* Card Styling */
 .card {
     background-color: #001f3f;
-    width: 150px;
-    height: 200px;
+    width: 200px;
+    height: 300px;
     perspective: 1000px;
     border-radius: 15px;
 }
@@ -97,7 +97,7 @@ body {
 
 /* Heading Styling for the New Section */
 .new-section h2 {
-    font-size: 40px;  /* Large font size for the heading */
+    font-size: 30px;  /* Large font size for the heading */
     color: #001f3f;
     margin-bottom: 30px;  /* Space between heading and button */
 }
@@ -108,11 +108,12 @@ body {
     color: white;
     border: none;
     padding: 20px 40px;   /* Larger padding for a bigger button */
-    font-size: 24px;      /* Larger font size for the button */
+    font-size: 20px;      /* Larger font size for the button */
     border-radius: 8px;   /* Slightly more rounded corners */
     cursor: pointer;
     transition: background-color 0.3s;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Optional: Button shadow for depth */
+    font-family: Old Standard TT;
 }
 
 /* Hover effect for the button */

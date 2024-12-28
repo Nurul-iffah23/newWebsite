@@ -1,34 +1,60 @@
-
-
-
-// Define questions
+//define question
 const questions = [
     {
-        question: "What is the capital of France?",
-        options: ["Berlin", "Madrid", "Paris", "Rome"],
-        correctAnswer: 2
+        question: "How does Traditional Ecological Knowledge (TEK) contribute to stream resilience in Malaysia?",
+        options: [
+            "By promoting sustainable land and water management practices",
+            "By improving biodiversity knowledge",
+            "By developing better weather and climate observation techniques",
+            "By increasing industrial development near water bodies"
+        ],
+        correctAnswer: 0
     },
     {
-        question: "What is 2 + 2?",
-        options: ["3", "4", "5", "6"],
+        question: "Which aspect of Traditional Ecological Knowledge (TEK) is most effective in managing water resources for stream resilience?",
+        options: [
+            "Land and water management practices",
+            "Cultural and ritual practices",
+            "Medicinal and food knowledge",
+            "Weather and climate observation"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "How does Traditional Ecological Knowledge (TEK) help in maintaining biodiversity in stream ecosystems?",
+        options: [
+            "By reducing the dependence on modern technologies",
+            "By recognizing the relationship between local plants, animals, and ecosystems",
+            "By discouraging community involvement in conservation efforts",
+            "By encouraging deforestation and land clearing"
+        ],
         correctAnswer: 1
     },
     {
-        question: "Which is the largest ocean on Earth?",
-        options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
-        correctAnswer: 3
+        question: "What role does Traditional Ecological Knowledge (TEK) play in enhancing community participation in stream management?",
+        options: [
+            "It isolates communities from modern conservation efforts",
+            "It helps empower local communities to actively manage and protect streams",
+            "It has no role in stream management",
+            "It focuses solely on protecting water quality without considering the community's role"
+        ],
+        correctAnswer: 1
     },
     {
-        question: "Who wrote 'Romeo and Juliet'?",
-        options: ["Shakespeare", "Dickens", "Hemingway", "Austen"],
-        correctAnswer: 0
-    },
-    {
-        question: "What is the speed of light?",
-        options: ["299,792 km/s", "150,000 km/s", "1,000,000 km/s", "300,000 km/s"],
-        correctAnswer: 0
+        question: "What is the primary cause of increasing pressure on Malaysian streams?",
+        options: [
+            "Overfishing",
+            "Pollution, urbanization, and deforestation",
+            "Climate change alone",
+            "Lack of education"
+        ],
+        correctAnswer: 1
     }
 ];
+
+
+// The rest of your quiz code remains the same.
+
 
 
 let currentQuestionIndex = 0;
@@ -112,6 +138,7 @@ function showResults() {
     document.querySelector(".score-section").style.display = 'block'; // Show score section
 }
 
+
 // Restart the quiz
 function restartQuiz() {
     currentQuestionIndex = 0;
@@ -123,3 +150,36 @@ function restartQuiz() {
 }
 
 showQuestion(); // Start the quiz when the page loads
+
+
+// Call this at the end of the quiz or appropriate event
+endQuiz();
+function quitGame() {
+    var quitButton = document.getElementById('quit-button');
+    var retryButton = document.getElementById('retry-button');
+    var feedback = document.getElementById('answer-report');
+
+    quitButton.innerHTML = "Exiting...";
+    quitButton.disabled = true;
+    feedback.innerHTML = "You have exited the quiz. Redirecting to the homepage...";
+
+    // After 2 seconds, redirect the user to the homepage (or any page you'd like)
+    setTimeout(function() {
+        window.location.href = "mainPage.html";  // Change this to your desired exit page
+    }, 2000); // 2-second delay before redirection
+}
+
+// Function to show Quit Game button when the quiz ends
+function endQuiz() {
+    // Hide "Next" button and show "Try Again" and "Quit Game" buttons
+    document.getElementById('next-button').style.display = 'none';
+    document.getElementById('retry-button').style.display = 'block';
+    document.getElementById('quit-button').style.display = 'block';  // Show Quit button
+}
+
+// Example function to start the quiz or next question
+function startQuiz() {
+    // Hide the Quit Game button at the start of the quiz
+    document.getElementById('quit-button').style.display = 'block';
+    // Additional code to start the quiz
+}

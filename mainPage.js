@@ -10,49 +10,53 @@ const feedbackForm = document.getElementById('feedback-form');
 const feedbackFormContainer = document.getElementById('feedback-form-container');
 const thankYouMessage = document.getElementById('thank-you-message');
 
-// Show modal on button click
+// Show modal and prevent scrolling
 feedbackButton.addEventListener('click', () => {
-  feedbackModal.style.display = 'flex';
+    feedbackModal.style.display = 'flex';
+    document.body.classList.add('modal-open'); // Disable page scroll
 });
 
 // Hide modal on close button click
 closeModal.addEventListener('click', () => {
-  feedbackModal.style.display = 'none';
+    feedbackModal.style.display = 'none';
+    document.body.classList.remove('modal-open'); // Re-enable page scroll
 });
 
-// Close modal when clicking outside the modal content
-window.addEventListener('click', (event) => {
-  if (event.target === feedbackModal) {
-    feedbackModal.style.display = 'none';
-  }
+// Close modal if clicking outside the modal content
+window.addEventListener('click', (e) => {
+    if (e.target === feedbackModal) {
+        feedbackModal.style.display = 'none';
+        document.body.classList.remove('modal-open');
+    }
 });
 
 // Show thumbs-up feedback options when "thumb-up" is selected
 thumbUpRadio.addEventListener('change', () => {
-  if (thumbUpRadio.checked) {
-    thumbUpFeedback.style.display = 'block';  // Show thumbs-up feedback options
-    thumbDownFeedback.style.display = 'none';  // Hide thumbs-down feedback options
-  }
+    if (thumbUpRadio.checked) {
+        thumbUpFeedback.style.display = 'block';  // Show thumbs-up feedback options
+        thumbDownFeedback.style.display = 'none';  // Hide thumbs-down feedback options
+    }
 });
 
 // Show thumbs-down feedback options when "thumb-down" is selected
 thumbDownRadio.addEventListener('change', () => {
-  if (thumbDownRadio.checked) {
-    thumbDownFeedback.style.display = 'block';  // Show thumbs-down feedback options
-    thumbUpFeedback.style.display = 'none';  // Hide thumbs-up feedback options
-  }
+    if (thumbDownRadio.checked) {
+        thumbDownFeedback.style.display = 'block';  // Show thumbs-down feedback options
+        thumbUpFeedback.style.display = 'none';  // Hide thumbs-up feedback options
+    }
 });
 
 // Handle form submission
 feedbackForm.addEventListener('submit', (event) => {
-  event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); // Prevent default form submission
 
-  // Hide the form and display the thank-you message
-  feedbackFormContainer.style.display = 'none';
-  thankYouMessage.style.display = 'block';
+    // Hide the form and display the thank-you message
+    feedbackFormContainer.style.display = 'none';
+    thankYouMessage.style.display = 'block';
 });
-document.querySelector('.learn-more-button').addEventListener('click', function (e) {
-    e.preventDefault();
-    window.location.href = this.getAttribute('href');
-  });
-  
+
+// Close thank-you message
+function closeFeedback() {
+    thankYouMessage.style.display = 'none';
+    feedbackFormContainer.style.display = 'block'; // Show feedback form again
+}

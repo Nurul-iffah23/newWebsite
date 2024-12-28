@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lake Resilience Assessment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Old Standard TT', serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      color: #333;
+    }
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #001f3f;
+    padding: 10px 20px;
+  }
+  
+  .logo img {
+    height: 50px; /* Adjust as needed */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  .nav-links li {
+    position: relative;
+    font-size: 15px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ffffff; /* Change text color on hover */
+    text-decoration: underline; /* Optionally underline text */
+  }
+  
+
+  /* Dropdown Styles */
+  .dropdown .dropbtn {
+    cursor: pointer;
+    
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #001f3f;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+  }
+  
+  .dropdown-content a {
+    padding: 12px 16px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #0056b3;
+/* Change text color on hover */
+    background-color: #0056b3;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+/* Subscribe Button Styles */
+/* Default state for the subscribe button */
+.subscribe-btn {
+    background-color: #0056b3; /* Distinct color */
+    border-radius: 5px;
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Add padding for better appearance */
+    display: inline-block; /* Ensure proper dimensions */
+}
+
+/* Hover state for the subscribe button */
+.nav-links li a.subscribe-btn:hover {
+    background-color: #000000;
+    /* New color on hover */
+}
+
+/* Ensure the hover effect is only applied to the button itself, not when the parent nav is hovered */
+.navbar:hover .nav-links li a.subscribe-btn:not(:hover) {
+    background-color: #0056b3; /* Maintain original color when nav is hovered but button is not */
+}
+
+    .header {
+    background: url('img/lake1.jpeg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+  }
+ 
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #000000;
+      margin-top: 40px;
+    }
+
+    form {
+      background-color: #f4f8fc;
+      padding: 30px;
+      max-width: 800px;
+      margin: 40px auto;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .form-section {
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: block;
+      font-size: 16px;
+      color: #202124;
+      margin-bottom: 6px;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .radio-group {
+      margin-bottom: 15px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin-top: 25px;
+      font-size: 18px;
+      color: #ffffff;
+      background-color: #001f3f;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+      font-family: 'Old Standard TT';
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      color: #fff;
+    }
+
+    .popup.high {
+      background-color: #28a745;
+    }
+
+    .popup.moderate {
+      background-color: #e0a800;
+    }
+
+    .popup.low {
+      background-color: #dc3545;
+    }
+
+    .popup img {
+      width: 100px;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .popup button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ffffff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .popup button:hover {
+      background-color: #f4f4f4;
+    }
+
+    .view-more {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0056b3;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .view-more:hover {
+      background-color: #003f7f;
+    }
+
+/* Footer Section */
+.footer {
+    background-color: #001f3f;
+    color: white;
+    padding: 40px 20px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-container > div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f2f2f2;
+}
+
+.footer p, .footer ul {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #f2f2f2;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #00d4ff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+  </style>
+</head>
+
+<body>
+       <!-- Navigation Bar -->
+       <nav class="navbar">
+        <div class="logo">
+          <a href="mainPage.html">
+            <img src="img/logo.png" alt="Logo"> <!-- Replace with your logo file -->
+          </a>
+        </div>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Activities</a>
+      <div class="dropdown-content">
+        <a href="flipcard.html">Games</a>
+        <a href="assessment.html">Assessment</a>
+      </div>
+    </li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
+  </ul>
+</nav>
+    <div class="header">
+        <h1>Assessment</h1>
+      </div>
+
+  <h2 style="text-align: center;">Lake Resilience Assessment</h2>
+
+  <form id="resilienceForm">
+    <div class="form-section">
+      <p>1. How close is the lake to your home or area that you visit frequently?</p>
+      <div class="radio-group">
+        <label><input type="radio" name="proximity" value="high"> Very close, within walking distance</label>
+        <label><input type="radio" name="proximity" value="moderate"> A bit far, but still nearby</label>
+        <label><input type="radio" name="proximity" value="low"> Quite far, I rarely visit</label>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p>2. How clear is the water in the lake from what you observe?</p>
+      <div class="radio-group">
+        <label><input type="radio" name="waterClarity" value="high"> Very clear, I can see the bottom</label>
+        <label><input type="radio" name="waterClarity" value="moderate"> Slightly cloudy, but visible</label>
+        <label><input type="radio" name="waterClarity" value="low"> Dark or murky, hard to see</label>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p>3. How often do you see people involved in activities near the lake?</p>
+      <div class="radio-group">
+        <label><input type="radio" name="humanActivity" value="high"> Often, there are plenty of people</label>
+        <label><input type="radio" name="humanActivity" value="moderate"> Occasionally, there are a few visitors</label>
+        <label><input type="radio" name="humanActivity" value="low"> Rarely, very few or no people</label>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p>4. How often does the lake experience flooding or drought conditions?</p>
+      <div class="radio-group">
+        <label><input type="radio" name="floodingDrought" value="high"> Rarely, the water level is stable</label>
+        <label><input type="radio" name="floodingDrought" value="moderate"> Sometimes, it fluctuates slightly</label>
+        <label><input type="radio" name="floodingDrought" value="low"> Often, there are severe floods or droughts</label>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p>5. How diverse is the wildlife in the lake and surrounding areas?</p>
+      <div class="radio-group">
+        <label><input type="radio" name="wildlifeDiversity" value="high"> Very diverse, many species thrive</label>
+        <label><input type="radio" name="wildlifeDiversity" value="moderate"> A few species are present</label>
+        <label><input type="radio" name="wildlifeDiversity" value="low"> Very few, or none at all</label>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p>6. How much pollution is present in the lake (e.g., trash, chemicals)?</p>
+      <div class="radio-group">
+        <label><input type="radio" name="pollutionLevel" value="low"> Very little pollution, water seems clean</label>
+        <label><input type="radio" name="pollutionLevel" value="moderate"> Some pollution, but it’s manageable</label>
+        <label><input type="radio" name="pollutionLevel" value="high"> High pollution, with visible trash or chemicals</label>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p>7. Is the lake used for recreational activities (swimming, boating)?</p>
+      <div class="radio-group">
+        <label><input type="radio" name="recreationalUse" value="high"> Yes, frequently used for various activities</label>
+        <label><input type="radio" name="recreationalUse" value="moderate"> Occasionally, it’s used for a few activities</label>
+        <label><input type="radio" name="recreationalUse" value="low"> Rarely or never, not suitable for activities</label>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <p>8. Is there any noticeable pollution from nearby industries?</p>
+      <div class="radio-group">
+        <label><input type="radio" name="industrialPollution" value="low"> No visible pollution from industries</label>
+        <label><input type="radio" name="industrialPollution" value="moderate"> Some pollution, but it’s being controlled</label>
+        <label><input type="radio" name="industrialPollution" value="high"> Significant pollution from nearby industries</label>
+      </div>
+    </div>
+
+    <button type="button" onclick="calculateResilience()">Submit</button>
+  </form>
+
+  <div id="popup" class="popup">
+    <img id="popupIcon" src="" alt="Result Icon">
+    <p id="popupText"></p>
+    <button onclick="closePopup()">Close</button>
+    <button class="view-more" onclick="viewMore()">View More</button>
+  </div>
+  
+  
+
+  <script>
+    function calculateResilience() {
+      const form = document.getElementById('resilienceForm');
+      const fields = [
+        'proximity',
+        'waterClarity',
+        'humanActivity',
+        'floodingDrought',
+        'wildlifeDiversity',
+        'pollutionLevel',
+        'recreationalUse',
+        'industrialPollution'
+      ];
+  
+      let allAnswered = true;
+      fields.forEach(field => {
+        if (!form[field].value) {
+          allAnswered = false;
+        }
+      });
+  
+      if (!allAnswered) {
+        alert('Please answer all questions before submitting.');
+        return;
+      }
+  
+      const responses = fields.map(field => form[field].value);
+  
+      let high = 0, moderate = 0, low = 0;
+  
+      responses.forEach(answer => {
+        if (answer === 'high') high++;
+        else if (answer === 'moderate') moderate++;
+        else if (answer === 'low') low++;
+      });
+  
+      const popup = document.getElementById('popup');
+      const popupText = document.getElementById('popupText');
+      const popupIcon = document.getElementById('popupIcon');
+  
+      let resilienceLevel = '';
+  
+      if (high > moderate && high > low) {
+        resilienceLevel = 'High Resilience';
+        popupText.textContent = resilienceLevel;
+        popup.className = 'popup high';
+        popupIcon.src = '1.png';
+      } else if (moderate > high && moderate > low) {
+        resilienceLevel = 'Moderate Resilience';
+        popupText.textContent = resilienceLevel;
+        popup.className = 'popup moderate';
+        popupIcon.src = '2.png';
+      } else if (low > high && low > moderate) {
+        resilienceLevel = 'Low Resilience';
+        popupText.textContent = resilienceLevel;
+        popup.className = 'popup low';
+        popupIcon.src = '3.png';
+      }
+  
+      // Store the resilience level in localStorage
+      localStorage.setItem('resilienceLevel', resilienceLevel);
+  
+      // Store user responses in localStorage
+      const userResponses = {};
+      fields.forEach(field => {
+        userResponses[field] = form[field].value;
+      });
+      localStorage.setItem('userResponses', JSON.stringify(userResponses));
+  
+      popup.style.display = 'block';
+    }
+  
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  
+    function viewMore() {
+      window.location.href = 'report.html';
+    }
+  </script>
+  
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>About Us</h3>
+        <p>We are dedicated to spreading knowledge and appreciation for the world's most beautiful lakes. Discover, learn, and protect our natural treasures.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Quizzes</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Subscribe</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: info@weboflife.com</p>
+        <p>Phone: +1 (555) 123-4567</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Web of Life. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Page</title>
     <link rel="stylesheet" href="quizz.css">
-    
-
 </head>
 <body>
     <div class="header">
         <h1>Quiz Game</h1>
     </div>
-
 
     <div class="quiz-container">
         <div id="question-container">
@@ -23,43 +20,53 @@
                 <button class="option" id="option3" onclick="selectAnswer(2)"></button>
                 <button class="option" id="option4" onclick="selectAnswer(3)"></button>
             </div>
-            <button id="next-button" onclick="nextQuestion()" style="display:none;"><button id="next-button"><i class="fas fa-arrow-right"></i></button>
-     
+            <button id="next-button" onclick="nextQuestion()" style="display:none;">
+                <i class="fas fa-arrow-right"></i>
+            </button>
         </div>
     </div>
-
     <div class="score-section">
         <div id="score">Your Score: 0</div>
         <div id="answer-report"></div>
         <div id="overall-result"></div>
-        <button id="retry-button" onclick="restartQuiz()" style="display:none;">Try Again</button>
+    
+        <!-- Buttons -->
+        <div class="button-container">
+            <button id="retry-button" onclick="restartQuiz()" style="display: none;">Try Again</button>
+            <button id="quit-button" onclick="quitGame()" style="display: none;">Quit Game</button>
+        </div>
     </div>
-<!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-container">
-      <div class="footer-about">
-        <h3>About Us</h3>
-        <p>We are dedicated to spreading knowledge and appreciation for the world's most beautiful lakes. Discover, learn, and protect our natural treasures.</p>
-      </div>
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#">Quizzes</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Subscribe</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p>Email: info@weboflife.com</p>
-        <p>Phone: +1 (555) 123-4567</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Web of Life. All Rights Reserved.</p>
-    </div>
-  </footer>
+    <br>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>We are dedicated to spreading knowledge and appreciation for the world's most beautiful lakes. Discover, learn, and protect our natural treasures.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Subscribe</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@weboflife.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Web of Life. All Rights Reserved.</p>
+        </div>
+    </footer>
+
     <script src="quiz.js"></script>
+
+   
 </body>
 </html>

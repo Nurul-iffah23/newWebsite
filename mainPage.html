@@ -7,38 +7,63 @@
   <link rel="stylesheet" href="MainStyle.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="logo.png" alt="Logo"> <!-- Replace with your logo file -->
-    </div>
-    <ul class="nav-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="flipcard.html">Games</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Subscribe</a></li>
-    </ul>
-  </nav>
-
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="img/logo.png" alt="Logo"> <!-- Replace with your logo file -->
+  </div>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Activities</a>
+      <div class="dropdown-content">
+        <a href="flipcard.html">Games</a>
+        <a href="assessment.html">Assessment</a>
+      </div>
+    </li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
+  </ul>
+</nav>
   <!-- Hero Section -->
   <header class="hero">
     <h1>WELCOME TO THE WEB OF LIFE</h1>
     <p>Discover the beauty and strength of nature's lakes.</p>
   </header>
-
-  <!-- Web of Life Section -->
   <section class="web-of-life-section">
     <div class="container">
-      <h2>Web of Life</h2>
-      <p>The "Web of Life" website is a platform dedicated to spreading awareness about the importance of lakes and their resilience in the face of environmental challenges. Lakes are not just beautiful natural features; they are vital ecosystems that support biodiversity, provide clean water, and sustain countless communities.</p>
-      <a href="about.html" class="learn-more-button">Learn More</a>
+      <div class="header">
+        <div class="logo">
+          <img src="img/logo.png" alt="Logo"> <!-- Replace with your logo file -->
+        </div>
+        <h1>Web Of Life</h1>
+      </div>
+      <h3 style="text-align: justify; font-weight: normal;">
+        <p style="font-size: 20px;">The "Web of Life" shows how all living things in an ecosystem are connected and depend on each other. In a lake, this means that plants, animals, microorganisms, and water work together to keep the ecosystem healthy.</p>        
+        <p style="font-size: 20px;">Resilience in a lake means its ability to bounce back from problems, like pollution or climate change. A lake is resilient when it can adapt to changes and continue to support life. </p>
+        <p style="font-size: 20px;">For example, plants in the lake help keep the water clean and provide shelter for fish, while fish and microbes help maintain balance.</p>
+        <p style="font-size: 20px;">When a lake is resilient, it can recover from disturbances and keep providing important services like clean water and habitat for wildlife.</p>
+    </h3>
 
-      
-    </div>
+      <a href="about.html" class="learn-more-button">Learn more</a>
+      <div class="cards">
+        <div class="cards">
+          <a href="resilience.html" class="card">
+            <img src="what.jpeg" alt="Lake Image">
+            <div class="card-text">What is resilience of ecological system of lakes?</div>
+          </a>
+          <a href="flipcard.html" class="card">
+            <img src="game.jpeg" alt="Lake Image">
+            <div class="card-text">let's play</div>
+          </a>
+          <a href="assessment.html" class="card">
+            <img src="assessment.jpeg" alt="Lake Image">
+            <div class="card-text">let's find out</div>
+          </a>
 
-
-
+        </div>
   </section>
+  
 
 <!-- Video Section -->
 <section class="video-section">
@@ -148,14 +173,20 @@
       </div>
       
       <!-- Thank You Message -->
-      <div id="thank-you-message" style="display: none;">
-        <h2>Thank you!</h2>
-        <p>Your feedback has been received.</p>
-        <!-- Success Icon -->
-        <img src="img/success-icon.png" alt="Success" class="success-icon">
-      </div>
+      <div id="thank-you-message" style="display: none;" class="feedback-container">
+        <div class="feedback-header">
+            <h2>Webpage Feedback</h2>
+           
+        </div>
+        <div class="feedback-content">
+            <div class="success-message">
+                <h3><span class="success-icon">✔</span> Success</h3>
+                <p>Thank you. Your feedback has been received.</p>
+            </div>
+        </div>
     </div>
   </div>
+</div>
 <!-- Footer Section -->
 <footer class="footer">
     <div class="footer-container">
@@ -177,7 +208,9 @@
         <p>Email: info@weboflife.com</p>
         <p>Phone: +1 (555) 123-4567</p>
       </div>
+      
     </div>
+    
     <div class="footer-bottom">
       <p>&copy; 2024 Web of Life. All Rights Reserved.</p>
     </div>
