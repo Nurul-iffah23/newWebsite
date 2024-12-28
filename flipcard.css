@@ -233,18 +233,17 @@ body {
 /* Style for the question mark icon */
 .question-icon {
     font-size: 36px;
-    color: #001f3f;
+    color: #ffffff;
     cursor: pointer;
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: #ffffff;
+    background-color: #000000;
     border-radius: 50%;
     padding: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
-
 .question-icon:hover {
     transform: scale(1.1);
 }
