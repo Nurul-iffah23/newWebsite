@@ -5,18 +5,12 @@ body {
     background-color: #ffffff;
   }
   
-/* Hero Section */
-.hero {
-    text-align: center;
+  .header {
+    background: url('img/lake1.jpeg') no-repeat center center/cover;
     color: white;
-    background: url('lake1.jpeg') no-repeat center center/cover;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 100px;
- 
-}
+    text-align: center;
+    padding: 50px 0;
+  }
   /* Navigation Bar Styles */
 .navbar {
   display: flex;
