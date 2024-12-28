@@ -121,36 +121,19 @@
         </div>
     </div>
     <script>
+        function startTest() {
+            var button = document.getElementById('start-button');
+            var feedback = document.getElementById('feedback');
+            button.innerHTML = "Starting...";
+            button.disabled = true;
+            feedback.innerHTML = "The test will begin shortly! Redirecting you...";
 
-        // Function to open the modal
-        function openModal() {
-            var modal = document.getElementById("gameModal");
-            modal.style.display = "flex";
+            setTimeout(function() {
+                window.location.href = "quizz.html";  // Change to your test page URL
+            }, 2000); // 2-second delay before redirection
         }
-    
-        // Function to close the modal
-        function closeModal() {
-            var modal = document.getElementById("gameModal");
-            modal.style.display = "none";
-        }
-    
-        // Hide the question mark icon when it touches the header
-        window.addEventListener('scroll', function () {
-            var questionIcon = document.querySelector('.question-icon');
-            var header = document.querySelector('.header');
-    
-            // Get the bottom position of the header
-            var headerRect = header.getBoundingClientRect();
-            var headerBottom = headerRect.bottom;
-    
-            // Hide the question mark if it's overlapping with the header
-            if (headerBottom > 0) {
-                questionIcon.style.display = 'none';
-            } else {
-                questionIcon.style.display = 'flex';
-            }
-        });
     </script>
+
 <!-- Footer Section -->
 <footer class="footer">
     <div class="footer-container">
