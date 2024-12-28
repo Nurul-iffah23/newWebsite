@@ -1,10 +1,13 @@
 /* Body styling */
+/* Body styling */
 body {
-    font-family: Old Standard TT;
+    font-family: 'Old Standard TT', serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-  }
+    height: 100vh;
+    text-align: center;
+}
   
   .header {
     background: url('lake1.jpeg') no-repeat center center/cover;
