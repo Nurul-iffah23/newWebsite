@@ -5,12 +5,18 @@ body {
     background-color: #ffffff;
   }
   
-  .header {
-    background: url('lake1.jpeg') no-repeat center center/cover;
-    color: white;
+/* Hero Section */
+.hero {
     text-align: center;
-    padding: 50px 0;
-  }
+    color: white;
+    background: url('lake1.jpeg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px;
+ 
+}
   /* Navigation Bar Styles */
 .navbar {
   display: flex;
