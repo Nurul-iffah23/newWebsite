@@ -114,19 +114,36 @@
             <button class="close-btn" onclick="closeModal()">Close</button>
         </div>
     </div>
-
     <script>
-        // Function to open the modal when the question mark is clicked
+
+        // Function to open the modal
         function openModal() {
             var modal = document.getElementById("gameModal");
             modal.style.display = "flex";
         }
-
+    
         // Function to close the modal
         function closeModal() {
             var modal = document.getElementById("gameModal");
             modal.style.display = "none";
         }
+    
+        // Hide the question mark icon when it touches the header
+        window.addEventListener('scroll', function () {
+            var questionIcon = document.querySelector('.question-icon');
+            var header = document.querySelector('.header');
+    
+            // Get the bottom position of the header
+            var headerRect = header.getBoundingClientRect();
+            var headerBottom = headerRect.bottom;
+    
+            // Hide the question mark if it's overlapping with the header
+            if (headerBottom > 0) {
+                questionIcon.style.display = 'none';
+            } else {
+                questionIcon.style.display = 'flex';
+            }
+        });
     </script>
 <!-- Footer Section -->
 <footer class="footer">
