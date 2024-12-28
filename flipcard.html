@@ -119,19 +119,21 @@
             <button class="close-btn" onclick="closeModal()">Close</button>
         </div>
     </div>
-    <script>
-        function startTest() {
-            var button = document.getElementById('start-button');
-            var feedback = document.getElementById('feedback');
-            button.innerHTML = "Starting...";
-            button.disabled = true;
-            feedback.innerHTML = "The test will begin shortly! Redirecting you...";
 
-            setTimeout(function() {
-                window.location.href = "quizz.html";  // Change to your test page URL
-            }, 2000); // 2-second delay before redirection
+    <script>
+
+        // Function to open the modal
+        function openModal() {
+            var modal = document.getElementById("gameModal");
+            modal.style.display = "flex";
         }
-    </script>
+    
+        // Function to close the modal
+        function closeModal() {
+            var modal = document.getElementById("gameModal");
+            modal.style.display = "none";
+        
+        };
 
 <!-- Footer Section -->
 <footer class="footer">
