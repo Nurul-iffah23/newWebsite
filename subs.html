@@ -41,46 +41,20 @@
   <div class="header">
     <h1>Subscribe Us</h1>
 </div>
+
+<!-- Subscription Form -->
 <div class="subscribe-container">
-    <div class="image-container">
-        <img src="lake2.jpeg" alt="Subscribe Image">
-        <img src="sungai.jpeg" alt="Subscribe Image">
-    </div>
-    <div class="form-container">
-        <h2>Subscribe to Our Newsletter</h2>
-        <form id="subscribe-form" action="thankyou.html" method="post">
-            <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Your Email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-    </div>
+  <div class="form-container">
+    <img src="subs.png" alt="Logo"> <!-- Replace with your logo file -->
+      <h2>Subscribe</h2>
+      <form id="subscribe-form" action="Tq.html" method="post">
+        <div class="input-container">
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <button type="submit">Subscribe</button>
+      </form>
+  </div>
 </div>
-
-
-<!-- Modal -->
-<div id="thank-you-modal" class="modal">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <p>Thank you for subscribing!</p>
-    </div>
-</div>
-
-<script>
-    document.getElementById('subscribe-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting the traditional way
-        document.getElementById('thank-you-modal').style.display = 'block';
-    });
-
-    document.querySelector('.close-button').addEventListener('click', function() {
-        document.getElementById('thank-you-modal').style.display = 'none';
-    });
-
-    window.addEventListener('click', function(event) {
-        if (event.target == document.getElementById('thank-you-modal')) {
-            document.getElementById('thank-you-modal').style.display = 'none';
-        }
-    });
-</script>
 
 <!-- Footer Section -->
 <footer class="footer">
@@ -103,7 +77,6 @@
       <p>Email: info@weboflife.com</p>
       <p>Phone: +1 (555) 123-4567</p>
     </div>
-    
   </div>
   <script src="script1.js"></script>
   <div class="footer-bottom">
