@@ -110,10 +110,13 @@ body {
 }
 
 
+
+
 /* Media Query for responsive grid */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .container {
-        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+        grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+        gap: 40px; /* Adjust the gap for better spacing */
     }
 
     .header h1 {
@@ -122,16 +125,48 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+        gap: 20px; /* Reduced gap for smaller screens */
+    }
+
+    .new-section h2 {
+        font-size: 28px; /* Adjust heading font size */
+    }
+
+    .new-section button {
+        font-size: 18px;  /* Smaller font size for the button */
+        padding: 15px 30px;  /* Adjust padding for smaller buttons */
+    }
+}
+
 @media (max-width: 480px) {
     .container {
         grid-template-columns: 1fr; /* 1 card per row */
+        gap: 15px;  /* Minimal gap for small screens */
+    }
+
+    .new-section h2 {
+        font-size: 24px;  /* Smaller heading size */
+    }
+
+    .new-section button {
+        font-size: 16px;  /* Smaller button font size */
+        padding: 12px 25px;  /* Smaller padding for the button */
+    }
+
+    .card {
+        width: 100%;  /* Make cards responsive to full width */
+        height: auto;  /* Adjust card height to maintain aspect ratio */
     }
 
     .header h1 {
-        font-size: 28px; /* Adjust header font size for small screens */
-        padding: 40px 0; /* Adjust padding for even smaller devices */
+        font-size: 24px; /* Smaller font size for small devices */
+        padding: 30px 0; /* Adjust padding for very small devices */
     }
 }
+
 /* Style for the question mark icon */
 .question-icon {
     display: inline-block;
@@ -150,7 +185,6 @@ body {
     position: relative; /* Position relative to the <h1> */
     top: 5px; /* Adjust vertical alignment */
 }
-
 
 .question-icon:hover {
     transform: scale(1.1);
