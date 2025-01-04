@@ -198,6 +198,14 @@ body {
         height: 200px; /* Adjust card height for mobile */
     }
 
+    .card-inner {
+        transition: transform 0.4s ease-in-out; /* Adjust transition speed for mobile */
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(180deg); /* Keep the flip effect */
+    }
+
     .new-section h2 {
         font-size: 24px;  
     }
@@ -216,4 +224,3 @@ body {
         font-size: 14px;  /* Adjust font size inside the cards for smaller screens */
     }
 }
-
