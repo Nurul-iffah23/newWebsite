@@ -1,102 +1,65 @@
-/* General styles */
-body, html {
+der h1 {
     margin: 0;
-    padding: 0;
-    font-family: 'Old Standard TT', serif;
-    box-sizing: border-box;
-    background-color: #f4f4f4; /* Light background */
 }
 
-/* Header */
-h1 {
-    margin: 0;
-    font-size: 36px;
-    color: #001f3f;
-    text-align: center;
-    padding: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* Subscribe Container */
 .subscribe-container {
-    font-family: 'Old Standard TT', serif;
+
+    font-family: Old Standard TT;
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    flex-direction: column; /* Stack elements vertically by default */
-    padding: 20px;
 }
-
-/* Image container */
 .image-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 20px;
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack the images vertically */
+    padding-right: 20px;
+    padding-left: 80px;
 }
 
 .image-container img {
     max-width: 70%;
     border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px; /* Adds a 20px gap below each image */
 }
 
-.image-container img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+/* Remove margin from the last image to prevent extra gap at the bottom */
+.image-container img:last-child {
+    margin-bottom: 0;
 }
 
-/* Form container */
+
 .form-container {
     flex: 1;
     text-align: center;
-    padding: 30px;
-    width: 100%;
-    max-width: 450px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding-right: 80px;
+   
+    height:80px;
+    width: 20px;
+
 }
 
 .form-container h2 {
     margin-bottom: 20px;
-    font-size: 28px;
-    color: #001f3f;
-    font-weight: 600;
-    letter-spacing: 1px;
 }
 
 .form-container input[type="email"] {
-    padding: 15px;
+    padding: 10px;
     width: 80%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
-}
-
-.form-container input[type="email"]:focus {
-    border-color: #0056b3;
-    outline: none;
+    border-radius: 4px;
 }
 
 .form-container button {
-    padding: 12px 20px;
+    padding: 10px 20px;
     background-color: #001f3f;
     color: #fff;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
 }
 
 .form-container button:hover {
@@ -119,98 +82,25 @@ h1 {
 .modal-content {
     background-color: #fff;
     margin: 15% auto;
-    padding: 30px;
+    padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 450px;
-    border-radius: 10px;
+    max-width: 400px;
+    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .close-button {
     color: #aaa;
     float: right;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
 .close-button:hover,
 .close-button:focus {
-    color: #001f3f;
+    color: black;
     text-decoration: none;
     cursor: pointer;
 }
 
-/* Media Queries for Mobile Responsiveness */
-
-/* For Tablet and smaller screens */
-@media (max-width: 768px) {
-    .subscribe-container {
-        padding: 10px;
-    }
-
-    /* Stack elements vertically and ensure the form has more space */
-    .form-container {
-        width: 85%; /* Allow the form to be more responsive */
-        padding: 20px;
-    }
-
-    .image-container img {
-        max-width: 100%; /* Ensure images do not overflow on small screens */
-    }
-
-    /* Adjust form input and button to be full width */
-    .form-container input[type="email"],
-    .form-container button {
-        width: 100%;
-        padding: 14px;
-    }
-
-    .form-container h2 {
-        font-size: 24px; /* Smaller font size for tablet */
-    }
-}
-
-/* For Mobile (up to 480px) */
-@media (max-width: 480px) {
-    .subscribe-container {
-        flex-direction: column;
-        padding: 20px;
-        height: auto;
-    }
-
-    /* Image container: make sure images are small enough */
-    .image-container img {
-        max-width: 100%; /* Full width images */
-    }
-
-    .form-container {
-        width: 100%;
-        padding: 20px;
-    }
-
-    /* Input and Button styles for mobile */
-    .form-container input[type="email"],
-    .form-container button {
-        width: 100%;
-        padding: 14px;
-        font-size: 16px;
-    }
-
-    .form-container h2 {
-        font-size: 20px; /* Smaller header font size */
-    }
-
-    /* Adjust the modal size for small screens */
-    .modal-content {
-        width: 90%;
-        max-width: 350px;
-    }
-
-    /* Make the close button larger and easier to tap */
-    .close-button {
-        font-size: 32px;
-    }
-}

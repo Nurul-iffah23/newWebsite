@@ -7,14 +7,21 @@
   <link rel="stylesheet" href="MainStyle.css">
   <link rel="stylesheet" href="style1.css">
   <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="hamburger.css">
   
   
 </head>
 <body>
-<!-- Navigation Bar -->
+<!-- Navbar -->
 <nav class="navbar">
   <div class="logo">
     <img src="logo.png" alt="Logo"> <!-- Replace with your logo file -->
+  </div>
+  <!-- Hamburger Menu Icon -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
   <ul class="nav-links">
     <li><a href="about.html">About</a></li>
@@ -29,6 +36,7 @@
     <li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
   </ul>
 </nav>
+
   <!-- Hero Section -->
   <header class="hero">
     <h1>WELCOME TO THE WEB OF LIFE</h1>
@@ -38,7 +46,7 @@
   <section class="web-of-life-section">
     <div class="container">
       <div class="header">
-        <div class="logo">
+        <div class="logo1">
           <img src="logo.png" alt="Logo"> <!-- Replace with your logo file -->
         </div>
         <h1>Web Of Life</h1>
@@ -222,6 +230,9 @@
       <p>&copy; 2024 Web of Life. All Rights Reserved.</p>
     </div>
   </footer>
+  
+
+  <script src="script1.js"></script>
   
   <script src="mainPage.js"></script>
 </body>

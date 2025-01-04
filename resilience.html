@@ -9,27 +9,33 @@
     <link rel="stylesheet" href="footer.css">
 </head>
 <body>
-        <!-- Navigation Bar -->
-
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
       <a href="mainPage.html">
-        <img src="img/logo.png" alt="Logo"> <!-- Replace with your logo file -->
+        <img src="logo.png" alt="Logo"> <!-- Replace with your logo file -->
       </a>
     </div>
-<ul class="nav-links">
-<li><a href="about.html">About</a></li>
-<li class="dropdown">
-  <a href="javascript:void(0)" class="dropbtn">Activities</a>
-  <div class="dropdown-content">
-    <a href="flipcard.html">Games</a>
-    <a href="assessment.html">Assessment</a>
-  </div>
-</li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
-</ul>
-</nav>
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Activities</a>
+        <div class="dropdown-content">
+          <a href="flipcard.html">Games</a>
+          <a href="assessment.html">Assessment</a>
+        </div>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
+    </ul>
+  </nav>
+
 
     <div class="resilience">
         <div class="header">
@@ -107,7 +113,7 @@
     </div>
     
   </div>
-  
+  <script src="script1.js"></script>
   <div class="footer-bottom">
     <p>&copy; 2024 Web of Life. All Rights Reserved.</p>
   </div>

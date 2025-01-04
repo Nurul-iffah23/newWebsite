@@ -360,3 +360,40 @@ video {
         font-size: 14px;
     }
 }
+@media (min-width: 1024px) {
+    /* For large desktops */
+    .web-of-life-section h2 {
+        font-size: 36px;
+    }
+
+    .video-section h2 {
+        font-size: 32px;
+    }
+
+    .card {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 1440px) {
+    /* For ultra-wide screens */
+    .container {
+        max-width: 1400px;
+    }
+
+    .cards {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    /* For very small devices */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .learn-more-button {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+}

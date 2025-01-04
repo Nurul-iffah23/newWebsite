@@ -7,37 +7,44 @@
     <link rel="stylesheet" href="subs.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="hamburger.css">
 </head>
 <body>
-        <!-- Navigation Bar -->
-
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
       <a href="mainPage.html">
-        <img src="img/logo.png" alt="Logo"> <!-- Replace with your logo file -->
+        <img src="logo.png" alt="Logo"> <!-- Replace with your logo file -->
       </a>
     </div>
-<ul class="nav-links">
-<li><a href="about.html">About</a></li>
-<li class="dropdown">
-  <a href="javascript:void(0)" class="dropbtn">Activities</a>
-  <div class="dropdown-content">
-    <a href="flipcard.html">Games</a>
-    <a href="assessment.html">Assessment</a>
-  </div>
-</li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
-</ul>
-</nav>
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Activities</a>
+        <div class="dropdown-content">
+          <a href="flipcard.html">Games</a>
+          <a href="assessment.html">Assessment</a>
+        </div>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
+    </ul>
+  </nav>
+
 
   <div class="header">
     <h1>Subscribe Us</h1>
 </div>
 <div class="subscribe-container">
     <div class="image-container">
-        <img src="img/lake2.jpeg" alt="Subscribe Image">
-        <img src="img/sungai.jpeg" alt="Subscribe Image">
+        <img src="lake2.jpeg" alt="Subscribe Image">
+        <img src="sungai.jpeg" alt="Subscribe Image">
     </div>
     <div class="form-container">
         <h2>Subscribe to Our Newsletter</h2>
@@ -98,7 +105,7 @@
     </div>
     
   </div>
-  
+  <script src="script1.js"></script>
   <div class="footer-bottom">
     <p>&copy; 2024 Web of Life. All Rights Reserved.</p>
   </div>

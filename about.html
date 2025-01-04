@@ -7,28 +7,40 @@
   <link rel="stylesheet" href="about.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="hamburger.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
 </head>
 <body>
-  <!-- Navigation Bar -->
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
       <a href="mainPage.html">
-        <img src="img/logo.png" alt="Logo"> <!-- Replace with your logo file -->
+        <img src="logo.png" alt="Logo"> <!-- Replace with your logo file -->
       </a>
     </div>
-<ul class="nav-links">
-<li><a href="about.html">About</a></li>
-<li class="dropdown">
-  <a href="javascript:void(0)" class="dropbtn">Activities</a>
-  <div class="dropdown-content">
-    <a href="flipcard.html">Games</a>
-    <a href="assessment.html">Assessment</a>
-  </div>
-</li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
-</ul>
-</nav>
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Activities</a>
+        <div class="dropdown-content">
+          <a href="flipcard.html">Games</a>
+          <a href="assessment.html">Assessment</a>
+        </div>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
+    </ul>
+  </nav>
+
+
 
   <div class="about-us">
     <div class="header">
@@ -64,44 +76,64 @@
     <div class="our-team">
       <h2>Our Team</h2>
       <div class="team-container">
-        <div class="team-member" style="background-color: #f4cf9f;">
-          <p><strong>Nurul Iffah</strong> </p>
-          <p><strong>Position: Web Developer</strong> </p>
+        <div class="team-member">
           <div class="avatar">
-            <img src="member/M1.jpeg" alt="Sarah Lee">
+            <img src="iffah.jpg" alt="Nurul Iffah">
+          </div>
+          <p>NURUL IFFAH</p>
+          <p class="designation">Web Developer</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+         
           </div>
         </div>
-        <div class="team-member" style="background-color: #d4d4d4;">
-            <p><strong>Siti Nur Anisah</strong> </p>
-            <p><strong>Position: E-Learning Developer</strong> </p>
+        <div class="team-member">
           <div class="avatar">
-            <img src="member/M4.jpeg" alt="Sarah Lee">
+            <img src="M4.jpeg" alt="Siti Nur Anisah">
+          </div>
+          <p>SITI NUR ANISAH</p>
+          <p class="designation">E-Learning Developer</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
-        <div class="team-member" style="background-color: #cae7ff;">
-            <p><strong>Masturina</strong> </p>
-            <p><strong>Position: Conservation App Developer</strong> </p>
+        <div class="team-member">
           <div class="avatar">
-            <img src="member/M3.jpeg" alt="Sarah Lee">
+            <img src="M3.jpeg" alt="Masturina">
+          </div>
+          <p>MASTURINA</p>
+          <p class="designation">Conservation App Developer</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
-        <div class="team-member" style="background-color: #ffcacd;">
-            <p><strong>Liyana</strong> </p>
-            <p><strong>Position: Environmental Education Coordinator</strong> </p>
+        <div class="team-member">
           <div class="avatar">
-            <img src="member/M2.jpeg" alt="Sarah Lee">
+            <img src="M2.jpeg" alt="Liyana">
+          </div>
+          <p>LIYANA</p>
+          <p class="designation">Environmental Education Coordinator</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
-        <div class="team-member" style="background-color: #c3d6c8;">
-            <p><strong>Khairunisa</strong> </p>
-            <p><strong>Position: Sustainability & Conservation Specialist</strong> </p>
+        <div class="team-member">
           <div class="avatar">
-            <img src="member/M1.jpeg" alt="Sarah Lee">
+            <img src="M1.jpeg" alt="Khairunisa">
+          </div>
+          <p>KHAIRUNISA</p>
+          <p class="designation">Sustainability & Conservation Specialist</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
 <!-- Footer Section -->
 <footer class="footer">
@@ -132,5 +164,6 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script src="script1.js"></script>
 </body>
 </html>
