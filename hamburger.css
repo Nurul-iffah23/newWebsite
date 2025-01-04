@@ -1,0 +1,36 @@
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.3s ease;
+}
+.logo img {
+    height: 50px;
+    max-width: 100%; /* Prevent overflow */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex; /* Show hamburger menu on smaller screens */
+    }
+}
+
+
+/* For Mobile (Screen width up to 480px) */
+@media (max-width: 480px) {
+
+
+    .hamburger {
+        margin-bottom: 10px;
+    }
+}
