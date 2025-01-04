@@ -13,11 +13,12 @@ body, html {
     justify-content: space-between;
     background-color: #001f3f;
     padding: 10px 20px;
-    flex-wrap: nowrap; /* Ensure nav items wrap on smaller screens */
+    flex-wrap: nowrap; /* Ensure nav items wrap */
 }
 
 .logo img {
-    height: 50px; /* Adjust as needed */
+    height: 50px;
+    max-width: 100%; /* Prevent overflow */
 }
 
 .nav-links {
@@ -41,8 +42,8 @@ body, html {
 }
 
 .nav-links a:hover {
-    color: #ffffff; /* Change text color on hover */
-    text-decoration: underline; /* Optionally underline text */
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 /* Dropdown Styles */
@@ -62,7 +63,7 @@ body, html {
 
 .dropdown-content a {
     padding: 12px 16px;
-    color: white; /* Match the navbar color */
+    color: white;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -78,27 +79,21 @@ body, html {
 
 /* Subscribe Button Styles */
 .subscribe-btn {
-    background-color: #0056b3; /* Distinct color */
+    background-color: #0056b3;
     border-radius: 5px;
-    color: #ffffff; /* Text color */
-    text-decoration: none; /* Remove underline */
-    padding: 10px 20px; /* Add padding for better appearance */
-    display: inline-block; /* Ensure proper dimensions */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
 }
 
-/* Hover state for the subscribe button */
 .nav-links li a.subscribe-btn:hover {
-    background-color: #000000; /* New color on hover */
-}
-
-/* Ensure the hover effect is only applied to the button itself, not when the parent nav is hovered */
-.navbar:hover .nav-links li a.subscribe-btn:not(:hover) {
-    background-color: #0056b3; /* Maintain original color when nav is hovered but button is not */
+    background-color: #000000;
 }
 
 /* Header Section */
 .header {
-    background: url('lake1.jpeg') no-repeat center center/cover;
+    background: url('img/lake1.jpeg') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 50px 20px;
@@ -116,18 +111,18 @@ body, html {
 /* For Tablets (Screen width up to 768px) */
 @media (max-width: 768px) {
     .navbar {
-        padding: 10px 15px; /* Reduce navbar padding */
+        padding: 10px 15px;
     }
 
     .nav-links {
-        flex-direction: column; /* Stack nav items vertically */
-        align-items: center; /* Center align items */
-        width: 100%; /* Ensure full width */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     .nav-links li {
         font-size: 16px;
-        margin: 5px 0; /* Add margin for spacing between items */
+        margin: 5px 0;
     }
 
     .header {
@@ -138,7 +133,6 @@ body, html {
         font-size: 32px;
     }
 
-    /* Adjust the dropdown for smaller screens */
     .dropdown-content {
         position: relative;
         box-shadow: none;
@@ -146,14 +140,14 @@ body, html {
     }
 
     .navbar .logo img {
-        height: 40px; /* Adjust logo size on mobile */
+        height: 40px;
     }
 }
 
 /* For Mobile (Screen width up to 480px) */
 @media (max-width: 480px) {
     .navbar {
-        flex-direction: column; /* Stack navbar items vertically */
+        flex-direction: column;
         padding: 10px;
         align-items: center;
     }
@@ -165,20 +159,18 @@ body, html {
     }
 
     .nav-links li {
-        font-size: 18px;
+        font-size: 16px;
         margin: 5px 0;
     }
 
     .navbar .logo img {
-        height: 40px; /* Adjust logo size on mobile */
+        height: 35px;
     }
 
-    /* Adjust the subscribe button for mobile */
     .subscribe-btn {
         margin-top: 10px;
     }
 
-    /* Adjust the header's text size and padding */
     .header {
         padding: 20px;
     }
@@ -187,13 +179,12 @@ body, html {
         font-size: 28px;
     }
 
-    /* Dropdown adjustment for mobile */
     .dropdown-content {
         width: 100%;
     }
 }
 
-/* For very small screens */
+/* For Very Small Screens (Screen width up to 375px) */
 @media (max-width: 375px) {
     .header h1 {
         font-size: 24px;
@@ -202,4 +193,25 @@ body, html {
     .nav-links a {
         padding: 12px 15px;
     }
+
+    .subscribe-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Additional General Improvements */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 8px;
+    text-align: left;
 }
