@@ -1,4 +1,3 @@
-
 /* Contact Container */
 .contact-container {
     max-width: 600px;
@@ -8,6 +7,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* Header Styles */
@@ -20,6 +20,7 @@
 .contact-container p {
     margin-bottom: 20px;
     color: #555;
+    font-size: 1rem;
 }
 
 /* Form Styles */
@@ -27,25 +28,30 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    
+    padding: 10px;
 }
 
+/* Label Styles */
 .contact-form label {
     font-weight: bold;
     text-align: left;
     color: #555;
+    font-size: 1rem;
 }
 
+/* Input and Textarea Styles */
 .contact-form input, 
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
     background: #fefefe;
+    box-sizing: border-box;
 }
 
+/* Focus State for Input and Textarea */
 .contact-form input:focus, 
 .contact-form textarea:focus {
     outline: none;
@@ -55,7 +61,7 @@
 
 /* Button Styles */
 .contact-form button {
-    padding: 10px 15px;
+    padding: 12px 20px;
     font-size: 1rem;
     font-weight: bold;
     color: #fff;
@@ -63,22 +69,49 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box;
 }
 
 .contact-form button:hover {
     background-color: #0056b3;
-}
-.notification {
-  background-color: #d4edda;
-  color: #155724;
-  padding: 10px;
-  margin-top: 10px;
-  border: 1px solid #c3e6cb;
-  border-radius: 5px;
-  display: none; /* Hidden by default */
+    transform: scale(1.05); /* Slight button enlargement on hover */
 }
 
-.notification.hidden {
-  display: none;
+/* Notification Styles */
+.notification {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .contact-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .contact-container h1 {
+        font-size: 1.8rem; /* Adjust heading size for small screens */
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+        font-size: 0.95rem; /* Adjust input font size */
+        padding: 10px;
+    }
+
+    .contact-form button {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
 }

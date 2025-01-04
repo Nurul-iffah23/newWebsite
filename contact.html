@@ -44,7 +44,7 @@
       <div class="contact-container">
           <h1>Contact Us</h1>
           <p>If you have any questions, feel free to reach out to us using the form below.</p>
-          <form class="contact-form" id="contactForm" action="https://formspree.io/f/xovvpwgw" method="POST">
+          <form class="contact-form" id="contactForm" action="javascript:void(0);" method="POST">
     <label for="name">Name</label>
     <input type="text" id="name" name="name" placeholder="Your Name" required>
 
@@ -56,12 +56,21 @@
 
     <button type="submit">Send Message</button>
 </form>
-          <div id="notification" class="notification hidden">
-              Thank you! Your message has been sent.
-          </div>
+
       </div>
 
-  
+      <script>
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            
+           
+            // Redirect to the 'thankyou.html' page after a short delay
+            setTimeout(function() {
+                window.location.href = 'thankyou.html'; // Redirect to a "thank you" page
+            }, 1000); // 2 seconds delay before redirecting
+        });
+    </script>
 
 
 <!-- Footer Section -->
