@@ -108,6 +108,14 @@
     </div>
 
     <script>
+        // JavaScript to handle mobile tap interaction
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+    });
+});
         function startTest() {
             var button = document.getElementById('start-button');
             var feedback = document.getElementById('feedback');
