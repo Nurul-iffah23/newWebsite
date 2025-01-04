@@ -1,0 +1,211 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Old Standard TT, serif;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #001f3f;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+    max-width: 100%; /* Ensure the image scales */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+    font-size: 13px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff; /* Change text color on hover */
+    text-decoration: underline; /* Optionally underline text */
+}
+
+/* Dropdown Styles */
+.dropdown .dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #001f3f;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+}
+
+.dropdown-content a:hover {
+    background-color: #0056b3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Subscribe Button Styles */
+.subscribe-btn {
+    background-color: #0056b3; /* Distinct color */
+    border-radius: 5px;
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Add padding for better appearance */
+    display: inline-block; /* Ensure proper dimensions */
+}
+
+/* Hover state for the subscribe button */
+.nav-links li a.subscribe-btn:hover {
+    background-color: #000000;
+}
+
+/* Ensure the hover effect is only applied to the button itself, not when the parent nav is hovered */
+.navbar:hover .nav-links li a.subscribe-btn:not(:hover) {
+    background-color: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    color: white;
+    background: url('img/lake1.jpeg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px;
+}
+
+.hero h1, .hero p {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 
+                 0 0 20px rgba(0, 0, 0, 0.6), 
+                 0 0 30px rgba(0, 0, 0, 0.4); /* Add glow effect */
+    font-size: 3em; /* Adjust font size as needed */
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 10px 15px; /* Reduce padding for medium screens */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center align links */
+        padding: 0;
+    }
+
+    .nav-links li {
+        font-size: 14px; /* Increase font size slightly for readability */
+        margin: 5px 0; /* Add some space between the items */
+    }
+
+    .hero {
+        height: 50vh; /* Reduce height of hero section */
+        padding: 50px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em; /* Adjust font size for smaller screens */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 40px; /* Reduce logo size on small screens */
+    }
+
+    .nav-links li {
+        font-size: 12px; /* Decrease font size further for smaller screens */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center; /* Stack navbar items vertically */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .nav-links {
+        width: 100%; /* Make nav links full width */
+        text-align: center; /* Center-align links */
+    }
+
+    .hero {
+        height: 40vh; /* Further reduce hero section height */
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2em; /* Adjust font size */
+    }
+
+    .hero p {
+        font-size: 1em; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 5px 10px; /* Smaller padding for very small screens */
+    }
+
+    .logo img {
+        height: 30px; /* Further reduce logo size */
+    }
+
+    .nav-links li {
+        font-size: 10px; /* Further decrease font size */
+    }
+
+    .nav-links a {
+        padding: 10px 15px; /* Adjust padding for smaller buttons */
+    }
+
+    .hero {
+        height: 35vh; /* Adjust hero section for smaller screens */
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8em; /* Adjust font size for h1 */
+    }
+
+    .hero p {
+        font-size: 0.9em; /* Adjust font size for p */
+    }
+}

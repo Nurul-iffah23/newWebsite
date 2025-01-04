@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lake Resilience Summary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="footer.css">
+  
+  <style>
+    body {
+      font-family: 'Old Standard TT', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #f4f8fc;
+      padding: 30px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #000000;
+      margin-top: 40px;
+    }
+    .summary {
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 20px 0;
+    }
+
+    .summary img {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .back-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #001f3f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+
+    .back-btn:hover {
+      background-color: #0056b3;
+    }
+
+    
+  </style>
+</head>
+<body>
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+        <div class="logo">
+          <a href="mainPage.html">
+            <img src="img/logo.png" alt="Logo"> <!-- Replace with your logo file -->
+          </a>
+        </div>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Activities</a>
+      <div class="dropdown-content">
+        <a href="flipcard.html">Games</a>
+        <a href="assessment.html">Assessment</a>
+      </div>
+    </li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
+  </ul>
+</nav>
+  <div class="header">
+    <h1>Assessment</h1>
+  </div>
+  
+
+<h2 style="text-align: center;">Your Assessment Summary</h2>
+   
+
+
+  <div class="content">
+ 
+    <p id="resilienceLevel" class="summary"></p>
+    <img id="summaryImage" src="" alt="Resilience Summary Image">
+    <div id="responses" class="summary"></div>
+
+  </div>
+  <div class="content">
+    <h2>Why Should You Care About Lake Resilience?</h2>
+    <p class="summary">
+      Lake resilience is essential for maintaining biodiversity, supporting local communities, and ensuring sustainable ecosystems. Healthy lakes contribute to clean water, recreation, and climate stability. Understanding and improving lake resilience helps protect these vital natural resources for future generations.
+    </p>
+  
+    <h2>Who to Contact?</h2>
+    <p class="summary">
+      If you notice changes or issues in your local lake, such as pollution, declining water levels, or harmful algal blooms, please report them to the relevant authorities. Contact the <strong>Local Environmental Agency</strong> or reach out to our team at <a href="iffah:nuruliffahhumaira@gmail.com">nuruliffahhumaira@gmail</a>.com</a> or call us at +1 (555) 987-6543. For Malaysian inquiries, please visit the <strong><a href="http://www.doe.gov.my/" target="_blank">Department of Environment (DOE) Malaysia</a></strong> website or call +60 3-8871 2000. Together, we can make a difference!
+    </p>
+  
+    <p id="resilienceLevel" class="summary"></p>
+    <img id="summaryImage" src="" alt="Resilience Summary Image">
+    <div id="responses" class="summary"></div>
+    <a href="mainPage.html" class="back-btn">Go Back</a>
+  </div>
+  
+  
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Retrieve data from localStorage
+      const resilienceLevel = localStorage.getItem('resilienceLevel');
+      const userResponses = JSON.parse(localStorage.getItem('userResponses'));
+
+      // Display resilience level
+      const resilienceLevelElement = document.getElementById('resilienceLevel');
+      resilienceLevelElement.textContent = `Your Lake Resilience Level: ${resilienceLevel}`;
+
+      // Update image based on resilience level
+      const summaryImage = document.getElementById('summaryImage');
+      if (resilienceLevel === 'High Resilience') {
+        summaryImage.src = '1.png';
+        summaryImage.alt = 'High Resilience';
+      } else if (resilienceLevel === 'Moderate Resilience') {
+        summaryImage.src = '2.png';
+        summaryImage.alt = 'Moderate Resilience';
+      } else if (resilienceLevel === 'Low Resilience') {
+        summaryImage.src = '3.png';
+        summaryImage.alt = 'Low Resilience';
+      }
+
+      // Display user responses
+      const responsesElement = document.getElementById('responses');
+      let responseHtml = '<h3>Your Answers:</h3><ul>';
+      for (const [question, answer] of Object.entries(userResponses)) {
+        const questionText = question.replace(/([A-Z])/g, ' $1').toLowerCase();
+        responseHtml += `<li><strong>${questionText}:</strong> ${answer}</li>`;
+      }
+      responseHtml += '</ul>';
+      responsesElement.innerHTML = responseHtml;
+    });
+  </script>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>About Us</h3>
+      <p>We are dedicated to spreading knowledge and appreciation for the world's most beautiful lakes. Discover, learn, and protect our natural treasures.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="flipcard.html">Quizzes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="subs.html">Subscribe</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: info@weboflife.com</p>
+      <p>Phone: +1 (555) 123-4567</p>
+    </div>
+    
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2024 Web of Life. All Rights Reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

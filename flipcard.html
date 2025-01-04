@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flipcard Page</title>
+    <link rel="stylesheet" href="flipcard.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+   
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="mainPage.html">
+        <img src="img/logo.png" alt="Logo"> <!-- Replace with your logo file -->
+      </a>
+    </div>
+<ul class="nav-links">
+<li><a href="about.html">About</a></li>
+<li class="dropdown">
+  <a href="javascript:void(0)" class="dropbtn">Activities</a>
+  <div class="dropdown-content">
+    <a href="flipcard.html">Games</a>
+    <a href="assessment.html">Assessment</a>
+  </div>
+</li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
+</ul>
+</nav>
+
+
+    <div class="header">
+        <h1>Games</h1>
+    </div>
+
+    <h1>Let's Explore The Cards</h1>
+    <span class="question-icon" onclick="openModal()">?</span>
+
+    <!-- Wrapper to center the container -->
+    <div class="section-wrapper">
+        <div class="container">
+            <!-- Card Elements -->
+           
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">How does Traditional Ecological Knowledge (TEK) contribute to stream resilience in Malaysia?</div>
+            <div class="card-back">By promoting sustainable land and water management practices.</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">Which aspect of Traditional Ecological Knowledge (TEK) is most effective in managing water resources for stream resilience?</div>
+                    <div class="card-back">Land and water management practices.</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">How does Traditional Ecological Knowledge (TEK) help in maintaining biodiversity in stream ecosystems?</div>
+            <div class="card-back">By recognizing the relationship between local plants, animals, and ecosystems.</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">What role does Traditional Ecological Knowledge (TEK) play in enhancing community participation in stream management?</div>
+                    <div class="card-back">It helps empower local communities to actively manage and protect streams.</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">What role does Traditional Ecological Knowledge (TEK) play in enhancing community participation in stream management?</div>
+                    <div class="card-back">It helps empower local communities to actively manage and protect streams.</div>
+                </div>
+            </div>
+            
+            <!-- More cards here -->
+        </div>
+    </div>
+
+
+    <!-- New Section with Button -->
+    <div class="new-section">
+        <h2>Ready for the Challenge?</h2>
+        <button class="btn" id="start-button" onclick="startTest()">Start the Challenge</button>
+        <div id="feedback" class="feedback"></div>
+    </div>
+
+    <script>
+        function startTest() {
+            var button = document.getElementById('start-button');
+            var feedback = document.getElementById('feedback');
+            button.innerHTML = "Starting...";
+            button.disabled = true;
+            feedback.innerHTML = "The test will begin shortly! Redirecting you...";
+
+            setTimeout(function() {
+                window.location.href = "quizz.html";  // Change to your test page URL
+            }, 2000); // 2-second delay before redirection
+        }
+    </script>
+
+ 
+    
+    <!-- Modal Structure -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <h2>How to Play the Game</h2>
+            <p>Follow these simple instructions to get started:</p>
+            <ul>
+                <li>Click on each card to reveal its content.</li>
+                <li>Read the content carefully.</li>
+                <li>Remember the answer.</li>
+                <li>Click "Start the Callenge" to begin your adventure!</li>
+            </ul>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+
+        // Function to open the modal
+        function openModal() {
+            var modal = document.getElementById("gameModal");
+            modal.style.display = "flex";
+        }
+    
+        // Function to close the modal
+        function closeModal() {
+            var modal = document.getElementById("gameModal");
+            modal.style.display = "none";
+        
+        };
+    </script>
+    
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>About Us</h3>
+        <p>We are dedicated to spreading knowledge and appreciation for the world's most beautiful lakes. Discover, learn, and protect our natural treasures.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="flipcard.html">Quizzes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="subs.html">Subscribe</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: info@weboflife.com</p>
+        <p>Phone: +1 (555) 123-4567</p>
+      </div>
+      
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Web of Life. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>

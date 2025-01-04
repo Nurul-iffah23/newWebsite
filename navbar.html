@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Home</title>
+</head>
+<body>
+  <!-- Navbar will be loaded here -->
+  <div id="navbar"></div>
+  <nav class="navbar">
+    <div class="logo">
+        <img src="img/logo.png" alt="Logo">
+    </div>
+    <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Activities</a>
+          <div class="dropdown-content">
+            <a href="flipcard.html">Games</a>
+            <a href="assessment.html">Assessment</a>
+          </div>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
+      </ul>
+</nav>
+
+  <!-- Main Content -->
+
+    <div class="header">
+      <h1>About Us</h1>
+    </div>
+
+  <script>
+    // Load the navbar.html into the #navbar div
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
