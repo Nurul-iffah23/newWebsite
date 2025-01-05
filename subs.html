@@ -49,14 +49,13 @@
 
   <div class="form-container">
     <img src="subs.png" alt="Logo"> <!-- Replace with your logo file -->
-      <h2>Subscribe</h2>
-      <form id="subscribe-form" action="javascript:void(0);" method="post">
+    <h2>Subscribe</h2>
+    <form id="subscribe-form" action="javascript:void(0);" method="post">
         <div class="input-container">
-          <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
         </div>
         <button type="submit">Subscribe</button>
-      </form>
-  </div>
+    </form>
 </div>
 
 <script>
@@ -64,13 +63,13 @@
   document.getElementById('subscribe-form').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent the form from submitting the traditional way
       
-     
       // Redirect to the 'thankyou.html' page after a short delay
       setTimeout(function() {
           window.location.href = 'tq.html'; // Redirect to a "thank you" page
-      }, 1000); // 2 seconds delay before redirecting
+      }, 1000); // 1 second delay before redirecting
   });
 </script>
+
 <!-- Footer Section -->
 <footer class="footer">
   <div class="footer-container">
