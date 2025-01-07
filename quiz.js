@@ -51,30 +51,48 @@ const questions = [
     }
 ];
 
-
-
-// The rest of your quiz code remains the same.
-
-
-
 let currentQuestionIndex = 0;
 let userAnswers = [];
 
 // Show the current question and options
 function showQuestion() {
     const question = questions[currentQuestionIndex];
+
+    // Update question text
     document.getElementById('question').textContent = question.question;
     document.getElementById('option1').textContent = question.options[0];
     document.getElementById('option2').textContent = question.options[1];
     document.getElementById('option3').textContent = question.options[2];
     document.getElementById('option4').textContent = question.options[3];
-    document.getElementById('next-button').style.display = 'none'; // Hide next button initially
+
+    // Show question number (e.g., 1/5)
+    document.getElementById('question-number').textContent = `${currentQuestionIndex + 1} / ${questions.length}`;
+
+    // Reset previous answers' colors
+    resetAnswerSelection();
+
+    // Hide next button initially
+    document.getElementById('next-button').style.display = 'none';
 }
 
 // Handle the user's answer selection
 function selectAnswer(answerIndex) {
+    // Highlight the selected option
+    const options = document.querySelectorAll('.option');
+    options.forEach(option => option.classList.remove('selected')); // Remove previous selections
+    document.getElementById('option' + (answerIndex + 1)).classList.add('selected'); // Add selection class
+
+    // Store the answer
     userAnswers[currentQuestionIndex] = answerIndex;
-    document.getElementById('next-button').style.display = 'block'; // Show next button
+
+    // Show next button
+    document.getElementById('next-button').style.display = 'block';
+}
+
+// Reset the styling of all answers
+function resetAnswerSelection() {
+    const options = document.querySelectorAll('.option');
+    options.forEach(option => option.classList.remove('selected')); // Remove any previous selection
 }
 
 // Show the next question
@@ -123,7 +141,7 @@ function showResults() {
     });
 
     document.getElementById("score").textContent = `Your Score: ${score}/${questions.length}`;
-    
+
     // Displaying the message based on the score
     const overallResult = document.getElementById("overall-result");
     if (score === questions.length) {
@@ -138,7 +156,6 @@ function showResults() {
     document.querySelector(".score-section").style.display = 'block'; // Show score section
 }
 
-
 // Restart the quiz
 function restartQuiz() {
     currentQuestionIndex = 0;
@@ -149,11 +166,7 @@ function restartQuiz() {
     document.getElementById('next-button').style.display = 'none';
 }
 
-showQuestion(); // Start the quiz when the page loads
-
-
-// Call this at the end of the quiz or appropriate event
-endQuiz();
+// Quit game button
 function quitGame() {
     var quitButton = document.getElementById('quit-button');
     var retryButton = document.getElementById('retry-button');
@@ -177,9 +190,12 @@ function endQuiz() {
     document.getElementById('quit-button').style.display = 'block';  // Show Quit button
 }
 
-// Example function to start the quiz or next question
+// Start quiz
 function startQuiz() {
     // Hide the Quit Game button at the start of the quiz
-    document.getElementById('quit-button').style.display = 'block';
+    document.getElementById('quit-button').style.display = 'none';
     // Additional code to start the quiz
 }
+
+// Initialize the quiz
+showQuestion(); // Start the quiz when the page loads

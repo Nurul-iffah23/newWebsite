@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web of Life</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   <link rel="stylesheet" href="MainStyle.css">
   <link rel="stylesheet" href="style1.css">
   <link rel="stylesheet" href="footer.css">
@@ -13,30 +16,33 @@
   
 </head>
 <body>
-<!-- Navbar -->
-<nav class="navbar">
-  <div class="logo">
-    <img src="logo.png" alt="Logo"> <!-- Replace with your logo file -->
-  </div>
-  <!-- Hamburger Menu Icon -->
-  <div class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <ul class="nav-links">
-    <li><a href="about.html">About</a></li>
-    <li class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn">Activities</a>
-      <div class="dropdown-content">
-        <a href="flipcard.html">Games</a>
-        <a href="assessment.html">Assessment</a>
-      </div>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
-  </ul>
-</nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="mainPage.html">
+        <img src="logo.png" alt="Logo"> <!-- Replace with your logo file -->
+      </a>
+    </div>
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Activities</a>
+        <div class="dropdown-content">
+          <a href="flipcard.html">Games</a>
+          <a href="assessment.html">Assessment</a>
+        </div>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
+    </ul>
+  </nav>
+
 
   <!-- Hero Section -->
   <header class="hero">
@@ -89,12 +95,12 @@
                 <div class="video-item">
                     <div class="video-frame">
                         <video controls>
-                            <source src="video.mp4" type="video/mp4">
+                            <source src="Titiwangsa .mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="video-details">
-                        <h3>Stream Management Academy</h3>
+                        <h3>Titiwangsa Lake Garden 4K | Aerial Drone View</h3>
                       
                     </div>
                 </div>
@@ -108,7 +114,7 @@
                         </video>
                     </div>
                     <div class="video-details">
-                        <h3>Lake Baikal</h3>
+                        <h3>Timah Tasoh Lake | Perlis Indera Kayangan</h3>
                       
                     </div>
                 </div>
@@ -122,7 +128,7 @@
                         </video>
                     </div>
                     <div class="video-details">
-                        <h3>Lake Baikal</h3>
+                        <h3>Kenyir lake, malaysia</h3>
                         
                     </div>
                 </div>
@@ -131,46 +137,68 @@
     </section>
 
     <section class="picture-section">
-        <div class="container">
-            <h2>Featured Pictures</h2>
-            <h3>Explore the stunning beauty of lakes around the world through these handpicked images.</h3>
-            <div class="row">
-                <!-- Picture 1 -->
-                <div class="picture-item">
-                    <div class="picture-frame">
-                        <img src="M5.jpeg" alt="Lake Baikal">
-                    </div>
-                    <div class="picture-details">
-                        <h3>Lakeside view, Titiwangsa Park, Kuala Lumpur</h3>
-                       
-                    </div>
-                </div>
-
-                <!-- Picture 2 -->
-                <div class="picture-item">
-                    <div class="picture-frame">
-                        <img src="M6.jpeg" alt="Lake Baikal">
-                    </div>
-                    <div class="picture-details">
-                        <h3>Kenyir Lake Terengganu</h3>
-                      
-                    </div>
-                </div>
-
-                <!-- Picture 3 -->
-                <div class="picture-item">
-                    <div class="picture-frame">
-                        <img src="M7.jpg" alt="Lake Baikal">
-                    </div>
-                    <div class="picture-details">
-                        <h3>Timah Tasoh Lake, Perlis</h3>
-             
-                    </div>
-                </div>
+      <div class="container">
+        <h2>Featured Pictures</h2>
+        <h3>Explore the stunning beauty of lakes around the world through these handpicked images.</h3>
+        <div class="row">
+          <!-- Picture 1 -->
+          <div class="picture-item">
+            <div class="picture-frame">
+              <!-- Add the link to Google Maps in the data-link attribute -->
+              <a href="#" class="show-location" data-location="Lakeside view, Titiwangsa Park, Kuala Lumpur" data-link="https://www.google.com/maps?q=Titiwangsa+Park+Kuala+Lumpur">
+                <img src="M5.jpeg" alt="Lake Baikal">
+              </a>
             </div>
+            <div class="picture-details">
+              <h3>Lakeside view, Titiwangsa Park, Kuala Lumpur</h3>
+            <span class="location-text"></span>
+            </div>
+          </div>
+    
+          <!-- Picture 2 -->
+          <div class="picture-item">
+            <div class="picture-frame">
+              <!-- Add the link to Google Maps in the data-link attribute -->
+              <a href="#" class="show-location" data-location="Kenyir Lake Terengganu" data-link="https://www.google.com/maps?q=Kenyir+Lake+Terengganu">
+                <img src="M6.jpeg" alt="Lake Baikal">
+              </a>
+            </div>
+            <div class="picture-details">
+              <h3>Kenyir Lake Terengganu</h3>
+              <span class="location-text"></span>
+            </div>
+          </div>
+    
+          <!-- Picture 3 -->
+          <div class="picture-item">
+            <div class="picture-frame">
+              <!-- Add the link to Google Maps in the data-link attribute -->
+              <a href="#" class="show-location" data-location="Timah Tasoh Lake, Perlis" data-link="https://www.google.com/maps?q=Timah+Tasoh+Lake+Perlis">
+                <img src="M7.jpg" alt="Lake Baikal">
+              </a>
+            </div>
+            <div class="picture-details">
+              <h3>Timah Tasoh Lake, Perlis</h3>
+              <span class="location-text"></span>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-  </section>
+    
+
+
+<!-- Modal for displaying location -->
+<div class="modal" id="locationModal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Location Information</h2>
+    <p id="locationText"></p>
+    <p><a id="locationLink" href="" target="_blank">View on Map</a></p>
+  </div>
+</div>
+
+ 
   
 
   <!-- Feedback Button -->
@@ -254,6 +282,7 @@
   </div>
 </div>
 
+
 <!-- Footer Section -->
 <footer class="footer">
   <div class="footer-container">
@@ -274,18 +303,185 @@
       <h3>Contact Us</h3>
       <p>Email: <a href="mailto:weboflifewol@gmail.com" style="color: white; text-decoration: none;">weboflifewol@gmail.com</a></p>
       <p>Phone: 01129195921</p>
+    </div>
   </div>
-  
+  <div class="footer-social">
+    <a href="https://facebook.com" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+    
+    <a href="https://twitter.com" target="_blank">
+      <i class="fab fa-twitter"></i>
+    </a>
+    
+    <a href="https://instagram.com" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
     
   </div>
   
   <div class="footer-bottom">
     <p>&copy; 2024 Web of Life. All Rights Reserved.</p>
   </div>
-</footer>
+  <style>
+    /* Footer Section */
+    .footer {
+      background: linear-gradient(135deg, #001f3f, #000000); /* Gradient background */
+      color: white;
+      padding: 50px 20px;
+      font-size: 16px;
+      text-align: left;
+      border-top: 5px solid #00d4ff; /* Top border to create separation */
+      box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+    footer a i {
+  font-size: 30px;
+  color: #f2f2f2;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a i:hover {
+  color: #00d4ff;
+  transform: scale(1.2); /* Slightly enlarges the icon on hover */
+}
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 30px;
+    }
+  
+    .footer-container > div {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 20px; /* Padding inside each section */
+    }
+  
+    .footer h3 {
+      font-size: 22px; /* Bigger heading for emphasis */
+      margin-bottom: 15px;
+      color: #f2f2f2;
+      font-weight: 600; /* Bold headings for emphasis */
+      text-align: left;
+      border-bottom: 2px solid #00d4ff; /* Border under headings for styling */
+      padding-bottom: 10px;
+    }
+  
+    .footer p, .footer ul {
+      font-size: 14px;
+      line-height: 1.8;
+      margin: 0;
+    }
+  
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+  
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+  
+    .footer ul li a {
+      text-decoration: none;
+      color: #f2f2f2;
+      font-weight: 500; /* Slightly bold links */
+      transition: color 0.3s ease, transform 0.3s ease; /* Added transform effect on hover */
+    }
+  
+    .footer ul li a:hover {
+      color: #00d4ff;
+      transform: translateX(5px); /* Moving the link slightly to the right on hover */
+    }
+  
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  
+    /* Social Media Icons */
+    .footer-social {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  
+    .footer-social a {
+      color: #f2f2f2;
+      font-size: 20px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+  
+    .footer-social a:hover {
+      color: #00d4ff;
+      transform: scale(1.2); /* Slightly enlarging the icons on hover */
+    }
+  
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+  
+      .footer-container > div {
+        flex: none;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .footer {
+        padding: 40px 15px;
+        font-size: 14px;
+      }
+  
+      .footer h3 {
+        font-size: 18px;
+      }
+  
+      .footer-bottom {
+        font-size: 12px;
+      }
+  
+      .footer ul li a {
+        font-size: 12px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .footer {
+        padding: 30px 10px;
+        font-size: 12px;
+      }
+  
+      .footer h3 {
+        font-size: 16px;
+      }
+  
+      .footer-bottom {
+        font-size: 10px;
+      }
+  
+      .footer ul li a {
+        font-size: 10px;
+      }
+    }
+  </style>
+  
+
+
 
 <script src="script1.js"></script>
-
 <script src="mainPage.js"></script>
 </body>
 </html>

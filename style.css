@@ -1,8 +1,9 @@
+
 /* General Reset */
 body, html {
     margin: 0;
     padding: 0;
-    font-family:'Old Standard TT' ;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
@@ -32,7 +33,7 @@ body, html {
 
 .nav-links li {
     position: relative;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .nav-links a {

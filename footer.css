@@ -1,62 +1,142 @@
+ /* Footer Section */
+ .footer {
+  background: linear-gradient(135deg, #001f3f, #000000); /* Gradient background */
+  color: white;
+  padding: 50px 20px;
+  font-size: 16px;
+  text-align: left;
+  border-top: 5px solid #00d4ff; /* Top border to create separation */
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
 
-  /* Footer Section */
-  .footer {
-    background-color: #001f3f;
-    color: white;
-    padding: 40px 20px;
-    font-size: 16px;
-    text-align: left;
-  }
-  
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-container > div {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 30px;
+  padding: 0 20px; /* Padding inside each section */
+}
+
+.footer h3 {
+  font-size: 22px; /* Bigger heading for emphasis */
+  margin-bottom: 15px;
+  color: #f2f2f2;
+  font-weight: 600; /* Bold headings for emphasis */
+  text-align: left;
+  border-bottom: 2px solid #00d4ff; /* Border under headings for styling */
+  padding-bottom: 10px;
+}
+
+.footer p, .footer ul {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #f2f2f2;
+  font-weight: 500; /* Slightly bold links */
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transform effect on hover */
+}
+
+.footer ul li a:hover {
+  color: #00d4ff;
+  transform: translateX(5px); /* Moving the link slightly to the right on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Social Media Icons */
+.footer-social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  color: #f2f2f2;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #00d4ff;
+  transform: scale(1.2); /* Slightly enlarging the icons on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
   .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
   }
-  
+
   .footer-container > div {
-    flex: 1;
-    min-width: 200px;
+    flex: none;
+    width: 100%;
+    margin-bottom: 20px;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 15px;
+    font-size: 14px;
+  }
+
   .footer h3 {
     font-size: 18px;
-    margin-bottom: 10px;
-    color: #f2f2f2;
   }
-  
-  .footer p, .footer ul {
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0;
-  }
-  
-  .footer ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer ul li {
-    margin-bottom: 8px;
-  }
-  
-  .footer ul li a {
-    text-decoration: none;
-    color: #f2f2f2;
-    transition: color 0.3s ease;
-  }
-  
-  .footer ul li a:hover {
-    color: #00d4ff;
-  }
-  
+
   .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #aaa;
+    font-size: 12px;
   }
-  
+
+  .footer ul li a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 10px;
+    font-size: 12px;
+  }
+
+  .footer h3 {
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    font-size: 10px;
+  }
+
+  .footer ul li a {
+    font-size: 10px;
+  }
+}

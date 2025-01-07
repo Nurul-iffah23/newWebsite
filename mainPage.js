@@ -60,3 +60,63 @@ function closeFeedback() {
     thankYouMessage.style.display = 'none';
     feedbackFormContainer.style.display = 'block'; // Show feedback form again
 }
+document.querySelectorAll('.show-location').forEach(function (element) {
+  element.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the default action (e.g., following the link)
+    
+    // Get the location from the clicked element's data-location attribute
+    const location = element.getAttribute('data-location');
+    
+    // Display the location in the modal
+    document.getElementById('locationText').innerText = location;
+    
+    // Show the modal
+    document.getElementById('locationModal').style.display = 'flex';
+  });
+});
+
+// Close the modal when clicking the close button
+document.querySelector('.modal .close').addEventListener('click', function () {
+  document.getElementById('locationModal').style.display = 'none';
+});
+
+// Close the modal if the user clicks outside of the modal content
+window.addEventListener('click', function (event) {
+  const modal = document.getElementById('locationModal');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+document.querySelectorAll('.show-location').forEach(function (element) {
+    element.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent the default action (e.g., following the link)
+      
+      // Get the location from the clicked element's data-location attribute
+      const location = element.getAttribute('data-location');
+      // Get the link from the clicked element's data-link attribute
+      const locationLink = element.getAttribute('data-link');
+      
+      // Display the location in the modal
+      document.getElementById('locationText').innerText = location;
+      
+      // Set the link to the "View on Map" button
+      document.getElementById('locationLink').setAttribute('href', locationLink);
+      
+      // Show the modal
+      document.getElementById('locationModal').style.display = 'flex';
+    });
+  });
+  
+  // Close the modal when clicking the close button
+  document.querySelector('.modal .close').addEventListener('click', function () {
+    document.getElementById('locationModal').style.display = 'none';
+  });
+  
+  // Close the modal if the user clicks outside of the modal content
+  window.addEventListener('click', function (event) {
+    const modal = document.getElementById('locationModal');
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+  

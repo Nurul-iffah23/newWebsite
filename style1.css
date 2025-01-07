@@ -1,23 +1,13 @@
 
-
-
 /* General Reset */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Old Standard TT', serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
-/* Navigation Bar Styles */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #001f3f;
-    padding: 10px 20px;
-    position: relative;
-}
+
 .logo1 {
     display: flex; /* Keep the logo aligned */
     align-items: center; /* Vertically center the logo */
@@ -29,38 +19,51 @@ body, html {
     max-width: 100%; /* Ensure the image scales */
     
 }
-.logo {
+/* Navigation Bar Styles */
+.navbar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    background-color: #001f3f;
+    padding: 10px 20px;
+    position: relative; /* Important for mobile menu */
+    z-index: 100; /* Keep navbar above content */
 }
 
 .logo img {
     height: 50px;
+    max-width: 100%; /* Prevent overflow */
 }
 
+/* Nav Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
     margin: 0;
     padding: 0;
 }
 
 .nav-links li {
     position: relative;
+    font-size: 15px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 14px 20px;
     display: block;
-    font-size: 14px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #f0f0f0;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Dropdown Styles */
+.dropdown .dropbtn {
+    cursor: pointer;
 }
 
 .dropdown-content {
@@ -73,27 +76,29 @@ body, html {
     border-radius: 5px;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 .dropdown-content a {
-    padding: 10px 15px;
+    padding: 12px 16px;
     color: white;
     text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
 .dropdown-content a:hover {
     background-color: #0056b3;
 }
 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 /* Hamburger Menu */
 .hamburger {
-    display: none;
+    display: none; /* Hidden by default */
     flex-direction: column;
     cursor: pointer;
-    justify-content: center;
-    align-items: center;
+    position: relative; /* Ensure it stays in context */
+    z-index: 1000; /* High z-index to stay on top */
 }
 
 .hamburger span {
@@ -103,6 +108,34 @@ body, html {
     margin: 4px 0;
     transition: 0.3s ease;
 }
+
+/* Nav Links (when Active for Hamburger) */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #001f3f;
+    z-index: 999; /* Place it on top of other elements */
+}
+
+/* Subscribe Button Styles */
+.subscribe-btn {
+    background-color: #0056b3;
+    border-radius: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.nav-links li a.subscribe-btn:hover {
+    background-color: #000000;
+}
+
 
 /* Hero Section */
 .hero {
@@ -115,6 +148,7 @@ body, html {
     justify-content: center;
     align-items: center;
     padding: 20px;
+   
 }
 
 .hero h1 {

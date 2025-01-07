@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="fadein.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
    
@@ -33,7 +35,7 @@
           <a href="assessment.html">Assessment</a>
         </div>
       </li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
       <li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
     </ul>
   </nav>
@@ -41,7 +43,9 @@
     <div class="header">
         <h1>Quiz Game</h1>
     </div>
-
+    <div id="question-info">
+      <span id="question-number"></span> <!-- e.g., 1/5, 2/5 -->
+  </div>
     <div class="quiz-container">
         <div id="question-container">
             <div class="question" id="question"></div>
@@ -61,11 +65,10 @@
         <div id="answer-report"></div>
         <div id="overall-result"></div>
     
-        <!-- Buttons -->
         <div class="button-container">
-            <button id="retry-button" onclick="restartQuiz()" style="display: none;">Try Again</button>
-            <button id="quit-button" onclick="quitGame()" style="display: none;">Quit Game</button>
-        </div>
+          <button id="retry-button" onclick="restartQuiz()">Try Again</button>
+          <button id="quit-button" onclick="quitGame()">Quit Game</button>
+      </div>
     </div>
     <br>
 

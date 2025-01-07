@@ -131,14 +131,14 @@ body {
     margin-top: 50px;
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(to right, #ffffff, #001f3f); /* Gradient background for a vibrant look */
+    background: linear-gradient(to bottom, #ffffff, #001f3f); /* Gradient background from top to bottom */
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
     color: white;
-   
 }
+
 
 
 /* Heading Styling */
@@ -146,7 +146,7 @@ body {
     font-size: 36px; /* Dynamic font size for headings */
     color: black;
     margin-bottom: 30px;
-    font-family: 'Old Standard TT', serif;
+ 
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -180,7 +180,7 @@ body {
     margin-top: 20px;
     font-size: 18px;
     font-style: italic;
-    color: black;
+    color: rgb(255, 255, 255);
     opacity: 0;
     transition: opacity 0.5s ease;
 }
