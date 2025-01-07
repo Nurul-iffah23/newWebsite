@@ -1,56 +1,56 @@
-//define question
 const questions = [
     {
-        question: "How does Traditional Ecological Knowledge (TEK) contribute to stream resilience in Malaysia?",
+        question: "How does TEK help streams in Malaysia?",
         options: [
-            "By promoting sustainable land and water management practices",
-            "By improving biodiversity knowledge",
-            "By developing better weather and climate observation techniques",
-            "By increasing industrial development near water bodies"
+            "Promotes sustainable land and water use",
+            "Improves biodiversity knowledge",
+            "Develops better climate tools",
+            "Increases industrial development"
         ],
         correctAnswer: 0
     },
     {
-        question: "Which aspect of Traditional Ecological Knowledge (TEK) is most effective in managing water resources for stream resilience?",
+        question: "What TEK practice manages water best?",
         options: [
-            "Land and water management practices",
-            "Cultural and ritual practices",
-            "Medicinal and food knowledge",
-            "Weather and climate observation"
+            "Land and water management",
+            "Cultural practices",
+            "Medicinal knowledge",
+            "Weather observation"
         ],
         correctAnswer: 0
     },
     {
-        question: "How does Traditional Ecological Knowledge (TEK) help in maintaining biodiversity in stream ecosystems?",
+        question: "How does TEK support biodiversity?",
         options: [
-            "By reducing the dependence on modern technologies",
-            "By recognizing the relationship between local plants, animals, and ecosystems",
-            "By discouraging community involvement in conservation efforts",
-            "By encouraging deforestation and land clearing"
+            "Reduces modern tech use",
+            "Links plants, animals, and ecosystems",
+            "Discourages conservation",
+            "Encourages deforestation"
         ],
         correctAnswer: 1
     },
     {
-        question: "What role does Traditional Ecological Knowledge (TEK) play in enhancing community participation in stream management?",
+        question: "How does TEK involve communities?",
         options: [
-            "It isolates communities from modern conservation efforts",
-            "It helps empower local communities to actively manage and protect streams",
-            "It has no role in stream management",
-            "It focuses solely on protecting water quality without considering the community's role"
+            "Isolates communities",
+            "Empowers them to protect streams",
+            "Has no role in management",
+            "Focuses only on water quality"
         ],
         correctAnswer: 1
     },
     {
-        question: "What is the primary cause of increasing pressure on Malaysian streams?",
+        question: "What pressures streams in Malaysia most?",
         options: [
             "Overfishing",
-            "Pollution, urbanization, and deforestation",
-            "Climate change alone",
+            "Pollution and deforestation",
+            "Only climate change",
             "Lack of education"
         ],
         correctAnswer: 1
     }
 ];
+
 
 
 // The rest of your quiz code remains the same.

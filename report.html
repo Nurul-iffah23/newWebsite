@@ -26,6 +26,7 @@
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       text-align: center;
+      animation: fadeIn 1.5s ease;
     }
 
     h2 {
@@ -39,13 +40,26 @@
       font-size: 18px;
       line-height: 1.8;
       margin: 20px 0;
-    }
+      animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
 
     .summary img {
       display: block;
       margin: 20px auto;
       max-width: 100%;
       height: auto;
+      animation: fadeIn 1.5s ease;
     }
 
     .back-btn {
@@ -120,7 +134,7 @@
   
     <h2>Who to Contact?</h2>
     <p class="summary">
-      If you notice changes or issues in your local lake, such as pollution, declining water levels, or harmful algal blooms, please report them to the relevant authorities. Contact the <strong>Local Environmental Agency</strong> or reach out to our team at <a href="iffah:nuruliffahhumaira@gmail.com">nuruliffahhumaira@gmail</a>.com</a> or call us at +1 (555) 987-6543. For Malaysian inquiries, please visit the <strong><a href="http://www.doe.gov.my/" target="_blank">Department of Environment (DOE) Malaysia</a></strong> website or call +60 3-8871 2000. Together, we can make a difference!
+      If you notice changes or issues in your local lake, such as pollution, declining water levels, or harmful algal blooms, please report them to the relevant authorities. Contact the <strong>Local Environmental Agency</strong> or reach out to our team at Email: <a href="mailto:weboflifewol@gmail.com">weboflifewol@gmail.com</a>. For Malaysian inquiries, please visit the <strong><a href="http://www.doe.gov.my/" target="_blank">Department of Environment (DOE) Malaysia</a></strong> website or call +60 3-8871 2000. Together, we can make a difference!
     </p>
   
    

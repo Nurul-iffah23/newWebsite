@@ -90,20 +90,25 @@
   transform: translateY(2px);
 }
 
-/* Notification */
+/* Notification Fade-In */
 .notification {
-  background-color: #4CAF50;
-  color: rgb(0, 0, 0);
-  padding: 15px;
-  margin-top: 20px;
-  border-radius: 5px;
-  display: none;
   animation: fadeIn 1s ease;
 }
+/* Notification Styles */
+.notification {
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 5px;
+}
 
-.notification.hidden {
+/* Hidden Class */
+.hidden {
   display: none;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

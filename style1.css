@@ -142,8 +142,18 @@ body, html {
     flex-direction: column;
     justify-content: center;
     padding: 100px;
+    animation: fadeIn 1.5s ease;
 }
-
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .hero h1, .hero p {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 
                  0 0 20px rgba(0, 0, 0, 0.6), 
@@ -158,116 +168,129 @@ body, html {
     font-size: 1.5em;
 }
 /* Base Styles for Mobile Devices */
+/* For Tablets (Screen width up to 768px) */
 @media (max-width: 768px) {
-    /* Navigation Bar */
     .navbar {
-        flex-direction: column;
-        padding: 15px 10px;
-    }
-
-    .logo {
-        margin: 0 auto 10px; /* Center and add spacing below the logo */
-    }
-
-    .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        text-align: center;
-        gap: 5px;
-    }
-
-    .nav-links li {
-        margin: 5px 0;
+        padding: 10px 15px;
     }
 
     .hamburger {
-        display: flex; /* Show hamburger menu on smaller screens */
+        display: flex; /* Show hamburger menu */
     }
 
     .nav-links {
-        display: none; /* Hide links initially when hamburger is active */
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #001f3f;
     }
 
-    .navbar.active .nav-links {
-        display: flex; /* Show links when the navbar is active */
+    .nav-links.active {
+        display: flex; /* Show when active */
     }
 
-    /* Hero Section */
-    .hero {
-        height: 50vh;
-        padding: 50px 20px;
+    .nav-links li {
+        font-size: 16px;
+        margin: 5px 0;
     }
 
-    .hero h1 {
-        font-size: 2.5em;
+    .header {
+        padding: 30px 20px;
     }
 
-    .hero p {
-        font-size: 1.2em;
-    }
-}
-
-/* Mobile Devices (480px and below) */
-@media (max-width: 480px) {
-    /* Navigation Bar */
-    .navbar {
-        padding: 10px 5px;
+    .header h1 {
+        font-size: 32px;
     }
 
-    .logo img {
+    .dropdown-content {
+        position: relative;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .navbar .logo img {
         height: 40px;
-        margin-bottom: 10px; /* Space between logo and links */
-        
-        
-    }
-
-    .nav-links a {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
-
-    /* Subscribe Button */
-    .subscribe-btn {
-        font-size: 12px;
-        padding: 8px 16px;
-    }
-
-    /* Hero Section */
-    .hero {
-        height: 40vh;
-        padding: 30px 15px;
-    }
-
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .hero p {
-        font-size: 1em;
     }
 }
 
-/* Ultra-Small Devices (320px and below) */
-@media (max-width: 320px) {
-    /* Navigation Bar */
-    .logo img {
+/* For Mobile (Screen width up to 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .hamburger {
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-links li {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .navbar .logo img {
         height: 35px;
     }
 
+    .subscribe-btn {
+        margin-top: 10px;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .dropdown-content {
+        width: 100%;
+    }
+}
+
+/* For Very Small Screens (Screen width up to 375px) */
+@media (max-width: 375px) {
+    .header h1 {
+        font-size: 24px;
+    }
+
     .nav-links a {
-        font-size: 12px;
+        padding: 12px 15px;
     }
 
     .subscribe-btn {
-        font-size: 10px;
-        padding: 6px 12px;
+        padding: 8px 16px;
+        font-size: 14px;
     }
+   
 
-    /* Hero Section */
-    .hero h1 {
-        font-size: 1.8em;
-    }
+}
 
-    .hero p {
-        font-size: 0.9em;
-    }
+/* Additional General Improvements */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 8px;
+    text-align: left;
 }

@@ -6,6 +6,16 @@ body, html {
   background-color: #f4f4f4; /* Light background for a clean look */
   color: #000000; /* Dark text color for contrast */
 }
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
 
 
 
@@ -24,6 +34,8 @@ body, html {
   background-image: url('darkblue.jpeg'); /* Add a background image for visual interest */
   background-size: cover;
   background-position: center;
+  animation: fadeIn 1.5s ease;
+  
 }
 
 .who-we-are h1 {
@@ -44,13 +56,138 @@ body, html {
   text-align: justify; /* Better readability */
 }
 
-/* Mission-Vision Section */
+
+/* Mission Vision Section */
 .mission-vision {
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-  margin: 120px 0;
+  
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
 }
+
+.mission-vision .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.mission-vision .header-img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mission-vision h1 {
+  font-size: 36px;
+  font-weight: bold;
+ 
+  color: black;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.mission-vision .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.mission-vision .box {
+  flex: 1 1 45%;
+  max-width: 500px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.mission-vision .box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mission-vision .box h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+  background-image: url('darkblue.jpeg'); /* Add a background image for visual interest */
+}
+
+.mission-vision .box ul {
+  list-style-type: none;
+  padding: 0;
+  color:black;
+}
+
+.mission-vision .box ul li {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.mission-vision .box ul li strong {
+  color: #1e3a8a;
+}
+
+.mission-vision .box p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .mission-vision h1 {
+      font-size: 28px;
+  }
+
+  .mission-vision .content {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .mission-vision .box {
+      flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-vision h1 {
+      font-size: 24px;
+  }
+
+  .mission-vision .header-img {
+      width: 80px;
+  }
+
+  .mission-vision .box {
+      padding: 20px;
+  }
+
+  .mission-vision .box h3 {
+      font-size: 20px;
+  }
+
+  .mission-vision .box ul li {
+      font-size: 16px;
+  }
+
+  .mission-vision .box p {
+      font-size: 16px;
+  }
+}
+
 
 .box {
   background-color: #001f3f;
@@ -66,6 +203,7 @@ body, html {
   background-image: url('darkblue.jpeg'); /* Add a background image for visual interest */
   background-size: cover;
   background-position: center;
+  
 }
 
 .box:hover {
@@ -91,6 +229,8 @@ body, html {
 .our-team {
   text-align: center;
   padding: 50px 20px;
+  animation: fadeIn 1.5s ease;
+  
 }
 
 .our-team h2 {

@@ -42,7 +42,21 @@
     <div class="header">
         <h1>Games</h1>
     </div>
-
+    <div class="information-container">
+      <div class="question">
+        <strong>What is TEK?</strong>
+      </div>
+      <div class="answer">
+        TEK (Traditional Ecological Knowledge) is the wisdom that local communities have about their environment, passed down through generations. It helps people manage natural resources like water, land, and wildlife in a sustainable way.
+      </div><br>
+      <div class="question">
+        <strong>Why should people know about TEK?</strong>
+      </div>
+      
+      <div class="answer">
+        Knowing about TEK is important because it offers practical and proven methods for protecting nature. TEK helps preserve biodiversity, protect ecosystems, and make communities stronger against challenges like climate change and resource loss. It combines old knowledge with modern science to create better solutions for the future.
+      </div>
+    </div>
     <h1>Let's Explore The Cards</h1>
     <span class="question-icon" onclick="openModal()">?</span>
 
@@ -52,65 +66,67 @@
             <!-- Card Elements -->
            
             <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">How does Traditional Ecological Knowledge (TEK) contribute to stream resilience in Malaysia?</div>
-            <div class="card-back">By promoting sustainable land and water management practices.</div>
-                </div>
-            </div>
+              <div class="card-inner">
+                  <div class="card-front">How does TEK help streams in Malaysia?</div>
+                  <div class="card-back">By promoting sustainable land and water management practices.</div>
+              </div>
+          </div>
+          
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">What TEK practice manages water best?</div>
+                  <div class="card-back">Land and water management practices.</div>
+              </div>
+          </div>
+          
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">How does TEK support biodiversity?</div>
+                  <div class="card-back">By recognizing the relationship between local plants, animals, and ecosystems.</div>
+              </div>
+          </div>
+          
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">How does TEK involve communities?</div>
+                  <div class="card-back">It helps empower local communities to actively manage and protect streams.</div>
+              </div>
+          </div>
+          
+          <div class="card">
+              <div class="card-inner">
+                  <div class="card-front">What pressures streams in Malaysia most?</div>
+                  <div class="card-back">Pollution and deforestation.</div>
+              </div>
+          </div>
+          
             
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">Which aspect of Traditional Ecological Knowledge (TEK) is most effective in managing water resources for stream resilience?</div>
-                    <div class="card-back">Land and water management practices.</div>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">How does Traditional Ecological Knowledge (TEK) help in maintaining biodiversity in stream ecosystems?</div>
-            <div class="card-back">By recognizing the relationship between local plants, animals, and ecosystems.</div>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">What role does Traditional Ecological Knowledge (TEK) play in enhancing community participation in stream management?</div>
-                    <div class="card-back">It helps empower local communities to actively manage and protect streams.</div>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">What role does Traditional Ecological Knowledge (TEK) play in enhancing community participation in stream management?</div>
-                    <div class="card-back">It helps empower local communities to actively manage and protect streams.</div>
-                </div>
-            </div>
-            
-            <!-- More cards here -->
+           
         </div>
     </div>
 
 
-    <!-- New Section with Button -->
-    <div class="new-section">
-        <h2>Ready for the Challenge?</h2>
-        <button class="btn" id="start-button" onclick="startTest()">Start the Challenge</button>
-        <div id="feedback" class="feedback"></div>
-    </div>
+<!-- New Section with Button -->
+<div class="new-section">
+  <h2>Ready for the Challenge?</h2>
+  <button class="btn" id="start-button" onclick="startTest()">Start the Challenge</button>
+  <div id="feedback" class="feedback"></div>
+</div>
 
-    <script>
-        function startTest() {
-            var button = document.getElementById('start-button');
-            var feedback = document.getElementById('feedback');
-            button.innerHTML = "Starting...";
-            button.disabled = true;
-            feedback.innerHTML = "The test will begin shortly! Redirecting you...";
+<script>
+  function startTest() {
+      var button = document.getElementById('start-button');
+      var feedback = document.getElementById('feedback');
+      button.innerHTML = "Starting...";
+      button.disabled = true;
+      feedback.innerHTML = "The test will begin shortly! Redirecting you...";
 
-            setTimeout(function() {
-                window.location.href = "quizz.html";  // Change to your test page URL
-            }, 2000); // 2-second delay before redirection
-        }
-    </script>
+      setTimeout(function() {
+          window.location.href = "quizz.html";  // Change to your test page URL
+      }, 2000); // 2-second delay before redirection
+  }
+</script>
+
 
  
     
@@ -144,7 +160,17 @@
         
         };
     </script>
-    
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const cards = document.querySelectorAll('.card');
+  
+          cards.forEach(card => {
+              card.addEventListener('click', () => {
+                  card.classList.toggle('flip');
+              });
+          });
+      });
+  </script>
 
 <!-- Footer Section -->
 <footer class="footer">
