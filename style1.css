@@ -1,33 +1,23 @@
+
+
+
 /* General Reset */
 body, html {
     margin: 0;
     padding: 0;
-    font-family:'Old Standard TT' ;
+    font-family: 'Old Standard TT', serif;
+    box-sizing: border-box;
 }
 
 /* Navigation Bar Styles */
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensure logo is on the left, hamburger on the right */
+    justify-content: space-between;
     background-color: #001f3f;
     padding: 10px 20px;
     position: relative;
-    
 }
-
-.logo {
-    display: flex; /* Ensure the logo is flex-aligned */
-    align-items: center; /* Vertically center the logo */
-    justify-content: flex-start; /* Align the logo to the left */
-    margin-right: 10px; /* Add some spacing from the left edge */
-}
-
-.logo img {
-    height: 50px; /* Adjust as needed */
-    max-width: 100%; /* Ensure the image scales proportionally */
-}
-
 .logo1 {
     display: flex; /* Keep the logo aligned */
     align-items: center; /* Vertically center the logo */
@@ -39,37 +29,38 @@ body, html {
     max-width: 100%; /* Ensure the image scales */
     
 }
+.logo {
+    display: flex;
+    align-items: center;
+}
 
+.logo img {
+    height: 50px;
+}
 
 .nav-links {
     list-style: none;
     display: flex;
+    gap: 15px;
     margin: 0;
     padding: 0;
-    transition: all 0.3s ease-in-out;
 }
 
 .nav-links li {
     position: relative;
-    font-size: 13px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 14px 20px;
+    padding: 10px 15px;
     display: block;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+    font-size: 14px;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #ffffff; /* Change text color on hover */
-    text-decoration: underline; /* Optionally underline text */
-}
-
-/* Dropdown Styles */
-.dropdown .dropbtn {
-    cursor: pointer;
+    color: #f0f0f0;
 }
 
 .dropdown-content {
@@ -82,8 +73,12 @@ body, html {
     border-radius: 5px;
 }
 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .dropdown-content a {
-    padding: 12px 16px;
+    padding: 10px 15px;
     color: white;
     text-decoration: none;
 }
@@ -92,44 +87,21 @@ body, html {
     background-color: #0056b3;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 /* Hamburger Menu */
 .hamburger {
-    display: none; /* Hidden by default, shown in responsive styles */
+    display: none;
     flex-direction: column;
     cursor: pointer;
-    justify-content: center; /* Vertically center the lines */
-    align-items: center; /* Align the lines horizontally */
-    position: absolute; /* Use absolute positioning */
-    right: 20px; /* Adjust the distance from the right edge */
-    top: 50%; /* Center vertically relative to the navbar */
-    transform: translateY(-50%); /* Correct vertical centering */
+    justify-content: center;
+    align-items: center;
 }
 
-/* Hamburger Lines */
 .hamburger span {
     background-color: white;
     height: 3px;
     width: 25px;
     margin: 4px 0;
     transition: 0.3s ease;
-}
-
-/* Subscribe Button Styles */
-.subscribe-btn {
-    background-color: #0056b3;
-    border-radius: 5px;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
-}
-
-.nav-links li a.subscribe-btn:hover {
-    background-color: #000000;
 }
 
 /* Hero Section */
@@ -141,156 +113,93 @@ body, html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 100px;
-    animation: fadeIn 1.5s ease;
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.hero h1, .hero p {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 
-                 0 0 20px rgba(0, 0, 0, 0.6), 
-                 0 0 30px rgba(0, 0, 0, 0.4);
+    align-items: center;
+    padding: 20px;
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 
 .hero p {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    margin: 10px 0 0;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
-/* Base Styles for Mobile Devices */
-/* For Tablets (Screen width up to 768px) */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 10px 15px;
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2em;
     }
 
+    .hero p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
     .hamburger {
-        display: flex; /* Show hamburger menu */
+        display: flex;
     }
 
     .nav-links {
-        display: none; /* Hidden by default */
+        display: none;
         flex-direction: column;
-        align-items: center;
-        width: 100%;
         position: absolute;
         top: 60px;
         right: 0;
         background-color: #001f3f;
-    }
-
-    .nav-links.active {
-        display: flex; /* Show when active */
-    }
-
-    .nav-links li {
-        font-size: 16px;
-        margin: 5px 0;
-    }
-
-    .header {
-        padding: 30px 20px;
-    }
-
-    .header h1 {
-        font-size: 32px;
-    }
-
-    .dropdown-content {
-        position: relative;
-        box-shadow: none;
         width: 100%;
     }
 
-    .navbar .logo img {
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .hero {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .nav-links a {
+        padding: 10px;
+    }
+
+    .logo img {
         height: 40px;
     }
 }
 
-/* For Mobile (Screen width up to 480px) */
-@media (max-width: 480px) {
-    .navbar {
-        flex-direction: column;
-        padding: 10px;
-        align-items: center;
-    }
-
-    .hamburger {
-        margin-bottom: 10px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .nav-links li {
-        font-size: 16px;
-        margin: 5px 0;
-    }
-
-    .navbar .logo img {
-        height: 35px;
-    }
-
-    .subscribe-btn {
-        margin-top: 10px;
-    }
-
-    .header {
-        padding: 20px;
-    }
-
-    .header h1 {
-        font-size: 28px;
-    }
-
-    .dropdown-content {
-        width: 100%;
-    }
-}
-
-/* For Very Small Screens (Screen width up to 375px) */
 @media (max-width: 375px) {
-    .header h1 {
-        font-size: 24px;
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.8em;
     }
 
     .nav-links a {
-        padding: 12px 15px;
+        padding: 8px;
     }
 
-    .subscribe-btn {
-        padding: 8px 16px;
-        font-size: 14px;
+    .logo img {
+        height: 35px;
     }
-   
-
-}
-
-/* Additional General Improvements */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-td, th {
-    padding: 8px;
-    text-align: left;
 }
