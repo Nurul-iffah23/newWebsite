@@ -1,4 +1,4 @@
-/* Contact Container */
+
 .contact-container {
     max-width: 600px;
     margin: 50px auto;
@@ -9,7 +9,40 @@
     text-align: center;
     box-sizing: border-box;
 }
+/* Add Fade-In Animation */
+.contact-container {
+    animation: fadeIn 1.5s ease;
+}
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add Icons */
+.contact-form .form-group label i {
+    margin-right: 8px;
+    color: #007BFF;
+}
+
+/* Character Counter */
+#charCount {
+    display: block;
+    text-align: right;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Notification Fade-In */
+.notification {
+    animation: fadeIn 1s ease;
+}
 /* Header Styles */
 .contact-container h1 {
     font-size: 2rem;
@@ -65,7 +98,7 @@
     font-size: 1rem;
     font-weight: bold;
     color: #fff;
-    background-color: #007BFF;
+    background-color: #001f3f;
     border: none;
     border-radius: 5px;
     cursor: pointer;

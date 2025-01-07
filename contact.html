@@ -41,36 +41,58 @@
       <h1>Contact Us</h1>
     </div>
 
-      <div class="contact-container">
-          <h1>Contact Us</h1>
-          <p>If you have any questions, feel free to reach out to us using the form below.</p>
-          <form class="contact-form" id="contactForm" action="javascript:void(0);" method="POST">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
-
-    <button type="submit">Send Message</button>
-</form>
-
-      </div>
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <p>If you have any questions, feel free to reach out using the form below.</p>
+      <form class="contact-form" id="contactForm" action="javascript:void(0);" method="POST">
+          <div class="form-group">
+              <label for="name"><i class="fas fa-user"></i> Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email</label>
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+              <label for="message"><i class="fas fa-comment"></i> Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Your Message" maxlength="500" required></textarea>
+              <small id="charCount">500 characters remaining</small>
+          </div>
+          <button type="submit" id="submitButton"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </form>
+      <div class="notification hidden" id="notification">Thank you for reaching out! Redirecting...</div>
+  </div>
+  
 
       <script>
-        // Handle form submission
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the form from submitting the traditional way
-            
-           
-            // Redirect to the 'thankyou.html' page after a short delay
-            setTimeout(function() {
-                window.location.href = 'thankyou.html'; // Redirect to a "thank you" page
-            }, 1000); // 2 seconds delay before redirecting
-        });
+  
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    
+    // Show thank-you message
+    const notification = document.getElementById('notification');
+    notification.classList.remove('hidden');
+    
+    // Disable button to prevent multiple submissions
+    const submitButton = document.getElementById('submitButton');
+    submitButton.disabled = true;
+    
+    // Redirect after 2 seconds
+    setTimeout(function () {
+        window.location.href = 'thankyou.html';
+    }, 2000);
+});
+
+// Character Counter
+const messageInput = document.getElementById('message');
+const charCount = document.getElementById('charCount');
+messageInput.addEventListener('input', function () {
+    const remaining = 500 - this.value.length;
+    charCount.textContent = `${remaining} characters remaining`;
+});
+
     </script>
+    
 
 
 <!-- Footer Section -->
@@ -89,18 +111,20 @@
         <li><a href="subs.html">Subscribe</a></li>
       </ul>
     </div>
-    <div class="footer-contact">
+    <div class="footer-contact" style="color: white;">
       <h3>Contact Us</h3>
-      <p>Email: info@weboflife.com</p>
-      <p>Phone: +1 (555) 123-4567</p>
-    </div>
+      <p>Email: <a href="mailto:weboflifewol@gmail.com" style="color: white; text-decoration: none;">weboflifewol@gmail.com</a></p>
+      <p>Phone: 01129195921</p>
+  </div>
+  
     
   </div>
-  <script src="script1.js"></script>
+  
   <div class="footer-bottom">
     <p>&copy; 2024 Web of Life. All Rights Reserved.</p>
   </div>
 </footer>
-</body>
 
-    </html>
+<script src="script1.js"></script>
+</body>
+</html>

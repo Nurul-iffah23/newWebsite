@@ -43,30 +43,41 @@
 </div>
 
 <!-- Subscription Form -->
+<!-- Subscription Form -->
 <div class="subscribe-container">
-  <!-- Title added here -->
-  <h1>Stay Updated with Our Newsletter</h1>
+  <h1>Never Miss Out on What’s New</h1>
 
   <div class="form-container">
-    <img src="subs.png" alt="Logo"> <!-- Replace with your logo file -->
-    <h2>Subscribe</h2>
-    <form id="subscribe-form" action="javascript:void(0);" method="post">
-        <div class="input-container">
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-        </div>
-        <button type="submit">Subscribe</button>
-    </form>
+      <img src="subs.png" alt="Newsletter Logo"> <!-- Replace with your logo file -->
+      <h2><i class="fas fa-envelope"></i> Subscribe</h2>
+      <form id="subscribe-form" action="javascript:void(0);" method="post">
+          <div class="input-container">
+              <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+      </form>
+      <div class="notification hidden" id="notification">Thank you for subscribing! Redirecting...</div>
+  </div>
 </div>
 
 <script>
   // Handle form submission
-  document.getElementById('subscribe-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the form from submitting the traditional way
-      
-      // Redirect to the 'thankyou.html' page after a short delay
-      setTimeout(function() {
-          window.location.href = 'tq.html'; // Redirect to a "thank you" page
-      }, 1000); // 1 second delay before redirecting
+  document.getElementById('subscribe-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Show thank-you message
+      const notification = document.getElementById('notification');
+      notification.classList.remove('hidden');
+
+      // Disable button to prevent multiple submissions
+      const submitButton = event.target.querySelector('button');
+      submitButton.disabled = true;
+
+      // Redirect to the 'thankyou.html' page after a delay
+      setTimeout(function () {
+          window.location.href = 'tq.html'; // Redirect to your thank-you page
+      }, 2000); // 2-second delay before redirecting
   });
 </script>
 
@@ -86,16 +97,20 @@
         <li><a href="subs.html">Subscribe</a></li>
       </ul>
     </div>
-    <div class="footer-contact">
+    <div class="footer-contact" style="color: white;">
       <h3>Contact Us</h3>
-      <p>Email: info@weboflife.com</p>
-      <p>Phone: +1 (555) 123-4567</p>
-    </div>
+      <p>Email: <a href="mailto:weboflifewol@gmail.com" style="color: white; text-decoration: none;">weboflifewol@gmail.com</a></p>
+      <p>Phone: 01129195921</p>
   </div>
-  <script src="script1.js"></script>
+  
+    
+  </div>
+  
   <div class="footer-bottom">
     <p>&copy; 2024 Web of Life. All Rights Reserved.</p>
   </div>
 </footer>
+  <script src="script1.js"></script>
+
 </body>
 </html>
