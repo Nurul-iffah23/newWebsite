@@ -172,6 +172,25 @@
               });
           });
       });
+
+      document.addEventListener("DOMContentLoaded", () => {
+    // Select all cards
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        // Add event listener for the tap/click event
+        card.addEventListener("click", () => {
+            // Add the "flip" class to flip the card
+            card.classList.add("flip");
+
+            // Set a timer to remove the "flip" class after 3 seconds
+            setTimeout(() => {
+                card.classList.remove("flip");
+            }, 3000); // 3000ms = 3 seconds
+        });
+    });
+});
+
   </script>
 
 <!-- Footer Section -->

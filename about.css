@@ -59,7 +59,6 @@ body, html {
 
 /* Mission Vision Section */
 .mission-vision {
-  
   padding: 60px 20px;
   text-align: center;
   animation: fadeIn 1.5s ease;
@@ -83,7 +82,6 @@ body, html {
 .mission-vision h1 {
   font-size: 36px;
   font-weight: bold;
- 
   color: black;
   line-height: 1.5;
   letter-spacing: 2px;
@@ -107,6 +105,7 @@ body, html {
   padding: 30px;
   text-align: left;
   transition: transform 0.3s, box-shadow 0.3s ease;
+  margin-bottom: 20px; /* Add space between boxes */
 }
 
 .mission-vision .box:hover {
@@ -117,16 +116,18 @@ body, html {
 .mission-vision .box h3 {
   font-size: 24px;
   font-weight: bold;
-  color: black;
+  color: rgb(255, 255, 255);
   margin-bottom: 20px;
   text-align: center;
   background-image: url('darkblue.jpeg'); /* Add a background image for visual interest */
+  background-size: cover; /* Ensure background covers the box */
+  background-position: center; /* Center the background image */
 }
 
 .mission-vision .box ul {
   list-style-type: none;
   padding: 0;
-  color:black;
+  color: black;
 }
 
 .mission-vision .box ul li {
@@ -147,6 +148,23 @@ body, html {
 }
 
 /* Responsive Styles */
+@media (max-width: 1024px) {
+  .mission-vision h1 {
+      font-size: 30px;
+  }
+
+  .mission-vision .content {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .mission-vision .box {
+      flex: 1 1 100%;
+      max-width: 100%;
+      padding: 25px; /* Adjust padding for smaller screens */
+  }
+}
+
 @media (max-width: 768px) {
   .mission-vision h1 {
       font-size: 28px;
@@ -159,6 +177,19 @@ body, html {
 
   .mission-vision .box {
       flex: 1 1 100%;
+      padding: 20px;
+  }
+
+  .mission-vision .box h3 {
+      font-size: 22px;
+  }
+
+  .mission-vision .box ul li {
+      font-size: 16px;
+  }
+
+  .mission-vision .box p {
+      font-size: 16px;
   }
 }
 
@@ -172,21 +203,26 @@ body, html {
   }
 
   .mission-vision .box {
-      padding: 20px;
+      padding: 15px;
   }
 
   .mission-vision .box h3 {
-      font-size: 20px;
+      font-size: 18px;
   }
 
   .mission-vision .box ul li {
-      font-size: 16px;
+      font-size: 14px;
   }
 
   .mission-vision .box p {
-      font-size: 16px;
+      font-size: 14px;
+  }
+
+  .mission-vision .content {
+      gap: 10px; /* Reduce the gap between items on small screens */
   }
 }
+
 
 
 .box {

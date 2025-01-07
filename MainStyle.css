@@ -68,10 +68,20 @@ h1 {
 h3 {
     font-size: 20px;
     margin: 10px 0 20px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #444;
+    font-weight: 400;
 }
-h2, h3 {
+
+
+h2{
     text-align: center;
     margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #001f3f;
 }
 
 /* Cards Layout */
@@ -152,6 +162,33 @@ h2, h3 {
        font-size: 14px;
        color: #555;
    }
+   .picture-section .picture-item {
+    position: relative;
+    flex: 1 1 calc(33% - 10px);
+    margin: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.picture-section .picture-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the picture on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow */
+}
+
+.picture-frame img {
+    width: 100%;
+    display: block;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease; /* Smooth zoom-in effect for the image */
+}
+
+.picture-section .picture-item:hover .picture-frame img {
+    transform: scale(1.1); /* Zoom in on the image slightly */
+}
 
 
 /* Video Section */
