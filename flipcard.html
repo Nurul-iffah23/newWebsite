@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="flipcard.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="hamburger.css">
 </head>
 <body>
    
@@ -36,7 +37,6 @@
       <li><a href="subs.html" class="subscribe-btn">Subscribe</a></li>
     </ul>
   </nav>
-
 
 
     <div class="header">
@@ -85,15 +85,6 @@
                     <div class="card-back">It helps empower local communities to actively manage and protect streams.</div>
                 </div>
             </div>
-
-            
-<!-- CONTOH -->
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">What role does Traditional Ecological Knowledge (TEK) play in enhancing community participation in stream management?</div>
-                    <div class="card-back">It helps empower local communities to actively manage and protect streams.</div>
-                </div>
-            </div>
             
             <!-- More cards here -->
         </div>
@@ -108,14 +99,6 @@
     </div>
 
     <script>
-        // JavaScript to handle mobile tap interaction
-const cards = document.querySelectorAll('.card');
-
-cards.forEach(card => {
-    card.addEventListener('click', () => {
-        card.classList.toggle('flipped');
-    });
-});
         function startTest() {
             var button = document.getElementById('start-button');
             var feedback = document.getElementById('feedback');

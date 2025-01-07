@@ -1,49 +1,42 @@
-/* General Reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* Body Styling */
+/* Global Body Styling */
 body {
     font-family: 'Old Standard TT', serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    height: 100vh;
+    height: 100%;
     text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Wrapper for centering the container */
 .section-wrapper {
     display: flex;
-    justify-content: center;  /* Centers the container horizontally */
-    align-items: center;      /* Centers the container vertically */
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 0 15px;          /* Optional: Adds a bit of padding around the container */
+    padding: 20px; /* Adjusted for smaller screens */
 }
 
 /* Card Container */
 .container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);  /* Mobile-first: 1 card per row by default */
-    gap: 15px;
-    margin-bottom: 30px;
-    max-width: 100%;
-    justify-items: center;   
-    width: 100%;             
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Automatically fit cards */
+    gap: 20px; /* Adjusted gap for smaller devices */
+    margin: 20px auto; /* Center the container and add space above and below */
+    max-width: 1200px; /* Constrain the maximum width for large screens */
+    padding: 0 15px; /* Padding for smaller screens */
+    width: 100%;
 }
 
 /* Card Styling */
 .card {
     background-color: #001f3f;
-    width: 100%;  /* Cards will take up the full width on small screens */
-    height: 250px; /* Adjusted height for mobile-first */
+    width: 100%; /* Ensure card adjusts to grid size */
+    height: 300px;
     perspective: 1000px;
     border-radius: 15px;
-    overflow: hidden; /* Ensure cards fit within boundaries */
-    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
 .card-inner {
@@ -54,13 +47,15 @@ body {
     transition: transform 0.6s;
     transform-style: preserve-3d;
     cursor: pointer;
+    border-radius: 15px;
 }
 
 .card:hover .card-inner {
     transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -70,6 +65,8 @@ body {
     justify-content: center;
     border-radius: 10px;
     color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .card-front {
@@ -77,36 +74,36 @@ body {
 }
 
 .card-back {
-    background-color: #1f354ad4;
+    background-color: rgba(31, 53, 74, 0.9);
     transform: rotateY(180deg);
 }
 
 /* New Section Styling */
 .new-section {
-    margin-top: 50px;  
+    margin-top: 50px;
     text-align: center;
-    padding: 50px 0;   
-    background-color: #f1f1f1;  
+    padding: 40px 20px; /* Adjusted for smaller screens */
+    background-color: #f1f1f1;
 }
 
-/* Heading Styling for the New Section */
+/* Heading Styling */
 .new-section h2 {
-    font-size: 30px;  
+    font-size: 28px; /* Dynamic font size for headings */
     color: #001f3f;
-    margin-bottom: 30px;  
+    margin-bottom: 20px;
 }
 
-/* Button Styling for the New Section */
+/* Button Styling */
 .new-section button {
     background-color: #1E3A8A;
     color: white;
     border: none;
-    padding: 20px 40px;
-    font-size: 20px;
-    border-radius: 8px;   
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
+    transition: background-color 0.3s, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .new-section button:hover {
@@ -114,7 +111,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Modal */
+/* Modal Styling */
 .modal {
     display: none;
     position: fixed;
@@ -122,22 +119,25 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .modal-content {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
-    width: 80%;
-    max-width: 600px;
+    width: 90%;
+    max-width: 500px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Close Button Styling */
 .close-btn {
     background-color: #1E3A8A;
     color: white;
@@ -146,82 +146,83 @@ body {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
+    transition: background-color 0.3s;
 }
 
 .close-btn:hover {
     background-color: #0d1e39;
 }
 
-/* Responsive Media Queries */
+/* Question Icon Styling */
+.question-icon {
+    display: inline-block;
+    margin-left: 10px;
+    background-color: #001f3f;
+    color: white;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 5px;
+    transition: transform 0.2s;
+}
+
+.question-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Media Queries */
 @media (max-width: 1024px) {
-    .container {
-        grid-template-columns: repeat(3, 1fr); /* 3 cards per row for tablet screens */
-        gap: 30px; 
+    .new-section h2 {
+        font-size: 26px;
     }
-    
-    .card {
-        width: 100%; /* Ensure cards fit within the grid */
-    }
-    
+
     .new-section button {
-        font-size: 18px;  
-        padding: 15px 30px; 
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .container {
+        gap: 30px; /* Increase spacing for larger tablets */
     }
 }
 
 @media (max-width: 768px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards per row for smaller tablets */
-        gap: 20px; 
-    }
-
-    .card {
-        height: 220px; /* Adjust card height */
-    }
-
     .new-section h2 {
-        font-size: 28px;
+        font-size: 22px;
     }
 
-    .new-section button {
-        font-size: 16px;  
-        padding: 15px 30px;
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+        gap: 15px;
+    }
+
+    .modal-content {
+        padding: 20px;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        grid-template-columns: 1fr; /* 1 card per row for mobile screens */
-        gap: 10px;  
-    }
-
-    .card {
-        height: 200px; /* Adjust card height for mobile */
-    }
-
-    .card-inner {
-        transition: transform 0.4s ease-in-out; /* Adjust transition speed for mobile */
-    }
-
-    .card:hover .card-inner {
-        transform: rotateY(180deg); /* Keep the flip effect */
+        grid-template-columns: 1fr; /* One card per row */
     }
 
     .new-section h2 {
-        font-size: 24px;  
+        font-size: 20px;
     }
 
     .new-section button {
-        font-size: 14px;  
-        padding: 12px 25px;  
+        font-size: 14px;
+        padding: 10px 20px;
     }
 
-    .header h1 {
-        font-size: 22px;  
-        padding: 30px 0; 
-    }
-
-    .card-front, .card-back {
-        font-size: 14px;  /* Adjust font size inside the cards for smaller screens */
+    .modal-content {
+        padding: 15px;
     }
 }
