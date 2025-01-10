@@ -1,5 +1,5 @@
- /* Footer Section */
- .footer {
+/* Footer Section */
+.footer {
   background: linear-gradient(135deg, #001f3f, #000000); /* Gradient background */
   color: white;
   padding: 50px 20px;
@@ -8,17 +8,27 @@
   border-top: 5px solid #00d4ff; /* Top border to create separation */
   box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+
+/* Footer Icons */
 footer a i {
-font-size: 30px;
-color: #f2f2f2;
-transition: color 0.3s ease, transform 0.3s ease;
+  font-size: 30px;
+  color: #f2f2f2;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 footer a i:hover {
-color: #00d4ff;
-transform: scale(1.2); /* Slightly enlarges the icon on hover */
+  color: #00d4ff;
+  transform: scale(1.2); /* Slightly enlarges the icon on hover */
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+/* Footer Container Layout */
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -35,6 +45,7 @@ transform: scale(1.2); /* Slightly enlarges the icon on hover */
   padding: 0 20px; /* Padding inside each section */
 }
 
+/* Footer Section Heading */
 .footer h3 {
   font-size: 22px; /* Bigger heading for emphasis */
   margin-bottom: 15px;
@@ -130,6 +141,16 @@ transform: scale(1.2); /* Slightly enlarges the icon on hover */
   .footer ul li a {
     font-size: 12px;
   }
+
+  /* Footer Styling for Small Screens */
+  footer {
+    text-align: center;
+    padding: 15px; /* Add padding for smaller screens */
+  }
+
+  footer p {
+    margin: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -148,5 +169,14 @@ transform: scale(1.2); /* Slightly enlarges the icon on hover */
 
   .footer ul li a {
     font-size: 10px;
+  }
+
+  /* Ensure social icons are centered and appropriately sized on smaller screens */
+  .footer-social {
+    gap: 15px;
+  }
+
+  .footer-social a {
+    font-size: 18px;
   }
 }

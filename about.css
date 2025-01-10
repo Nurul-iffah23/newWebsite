@@ -1,11 +1,5 @@
 /* General Reset */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f4; /* Light background for a clean look */
-  color: #000000; /* Dark text color for contrast */
-}
+
 @keyframes fadeIn {
   from {
       opacity: 0;
@@ -148,76 +142,76 @@ body, html {
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .mission-vision h1 {
-      font-size: 30px;
+    font-size: 30px;
   }
 
   .mission-vision .content {
-      flex-direction: column;
-      gap: 20px;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .mission-vision .box {
-      flex: 1 1 100%;
-      max-width: 100%;
-      padding: 25px; /* Adjust padding for smaller screens */
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 25px; /* Adjust padding for smaller screens */
   }
 }
 
 @media (max-width: 768px) {
   .mission-vision h1 {
-      font-size: 28px;
+    font-size: 28px;
   }
 
   .mission-vision .content {
-      flex-direction: column;
-      gap: 20px;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .mission-vision .box {
-      flex: 1 1 100%;
-      padding: 20px;
+    flex: 1 1 100%;
+    padding: 20px;
   }
 
   .mission-vision .box h3 {
-      font-size: 22px;
+    font-size: 22px;
   }
 
   .mission-vision .box ul li {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .mission-vision .box p {
-      font-size: 16px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .mission-vision h1 {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .mission-vision .header-img {
-      width: 80px;
+    width: 80px;
   }
 
   .mission-vision .box {
-      padding: 15px;
+    padding: 15px;
   }
 
   .mission-vision .box h3 {
-      font-size: 18px;
+    font-size: 18px;
   }
 
   .mission-vision .box ul li {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   .mission-vision .box p {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   .mission-vision .content {
-      gap: 10px; /* Reduce the gap between items on small screens */
+    gap: 10px; /* Reduce the gap between items on small screens */
   }
 }
 
