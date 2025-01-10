@@ -8,6 +8,16 @@
   border-top: 5px solid #00d4ff; /* Top border to create separation */
   box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+footer a i {
+font-size: 30px;
+color: #f2f2f2;
+transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a i:hover {
+color: #00d4ff;
+transform: scale(1.2); /* Slightly enlarges the icon on hover */
+}
 
 .footer-container {
   display: flex;
