@@ -167,12 +167,7 @@
     transform: scale(0.98);
 }
 
-/* Next Arrow Icon */
-#next-button::before {
-    content: '→'; /* Right arrow symbol */
-    font-size: 24px;
-    margin-right: 5px;
-}
+
 
 /* Next Button (Arrow) Styling with Font Awesome */
 #next-button {
