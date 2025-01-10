@@ -1,0 +1,135 @@
+/* Main Credits Section Styling */
+.credits-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #f4f4f9;
+    border-radius: 16px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease;
+}
+
+/* Header Title */
+.credits-section h1 {
+    font-size: 2.5rem;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Individual Credits Content */
+.credits-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Section Header */
+.credits-content h2 {
+    font-size: 2rem;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #004080;
+    padding-bottom: 10px;
+}
+
+/* List Styling */
+.credits-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* List Items Styling */
+.credits-content li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Nested list styling */
+.credits-content ul ul {
+    padding-left: 20px;
+}
+
+/* Hyperlinks */
+.credits-content a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.credits-content a:hover {
+    text-decoration: underline;
+}
+
+/* Special Thanks Section */
+.credits-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #000000;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+/* Hover Effect for Lists */
+.credits-content li:hover {
+    background-color: #f0f4f7;
+    padding-left: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .credits-section {
+        padding: 30px;
+        margin: 30px 15px;
+    }
+
+    .credits-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .credits-content li {
+        font-size: 1rem;
+    }
+
+    .credits-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .credits-section {
+        padding: 15px;
+        margin: 20px 10px;
+    }
+
+    .credits-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .credits-content li {
+        font-size: 0.95rem;
+    }
+
+    .credits-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

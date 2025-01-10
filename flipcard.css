@@ -247,7 +247,12 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
+h1{
 
+    display: flex; /* Enables gap usage */
+    flex-direction: column; /* Arrange items vertically */
+    gap: 15px; /* Adds 15px gap between child elements */
+}
 .modal-content {
     background-color: #ffffff;
     padding: 30px;
@@ -257,10 +262,21 @@ body {
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+.modal-content ul {
+    list-style-type: disc; /* Adds a bullet point */
+    padding-left: 20px; /* Adds some spacing to the left */
+    text-align: left; /* Ensures text is left-aligned */
+  }
+  
+  .modal-content li {
+    margin-bottom: 10px; /* Adds space between list items */
+  }
+  
+  
 
 /* Close Button Styling */
 .close-btn {
-    background-color: #1E3A8A;
+    background-color: #001f3f;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -271,45 +287,40 @@ body {
 }
 
 .close-btn:hover {
-    background-color: #0d1e39;
+    background-color: #007BFF;
 }
 
-/* Question Icon Styling */
 .question-icon {
     display: inline-block;
-    margin-left: 10px;
-    background-color: #001f3f;
-    color: white;
-    font-size: 18px;
+    font-size: 1.5rem; /* Size of the question icon */
+    background-color: #001f3f; /* Icon background color */
+    color: white; /* Icon text color */
     width: 30px;
     height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%; /* Makes it a circle */
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    position: relative;
-    top: 5px;
-    transition: transform 0.2s;
-    animation: fadeIn 1.5s ease;
-}
-
-.question-icon:hover {
-    transform: scale(1.1);
-}
-
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+  }
+  
+  .question-icon:hover {
+    background-color: #007BFF; /* Slightly darker green on hover */
+  }
 .information-container {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    margin: 0 auto;
-    opacity: 0; /* Start invisible */
-    transform: translateY(20px); /* Start slightly below its final position */
-    animation: fadeIn 1.5s ease forwards; /* Add forwards to persist final state */
-    position: relative; /* Ensure it doesn't disturb surrounding elements */
+    margin: 20px auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease forwards;
+    position: relative;
+    display: flex; /* Enables gap usage */
+    flex-direction: column; /* Arrange items vertically */
+    gap: 15px; /* Adds 15px gap between child elements */
 }
 
 /* Fade-In Animation */
